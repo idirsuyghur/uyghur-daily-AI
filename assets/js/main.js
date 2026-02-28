@@ -3,7 +3,7 @@ const qs=(s)=>document.querySelector(s);
 const toggle=()=>document.documentElement.classList.toggle('dark');
 qs('#themeToggle')?.addEventListener('click',toggle);
 
-fetch('/data/index.json').then(r=>r.json()).then(data=>{state.posts=data.posts;initFilters();render();});
+fetch('data/index.json').then(r=>r.json()).then(data=>{state.posts=data.posts;initFilters();render();});
 function initFilters(){
   const sel=qs('#categoryFilter');
   [...new Set(state.posts.map(p=>p.category))].forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;sel.appendChild(o)});
@@ -16,7 +16,7 @@ function filtered(){
 }
 function render(){
   const posts=filtered(), start=(state.page-1)*state.perPage;
-  qs('#postsGrid').innerHTML=posts.slice(start,start+state.perPage).map(p=>`<a href="/post.html?slug=${p.slug}" class="bg-white dark:bg-slate-900 rounded-2xl shadow p-4 hover:-translate-y-1 transition"><p class="text-xs text-slate-500">${p.date} · ${p.category}</p><h3 class="font-bold mt-2">${p.title}</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-300">${p.description}</p></a>`).join('');
+  qs('#postsGrid').innerHTML=posts.slice(start,start+state.perPage).map(p=>`<a href="post.html?slug=${p.slug}" class="bg-white dark:bg-slate-900 rounded-2xl shadow p-4 hover:-translate-y-1 transition"><p class="text-xs text-slate-500">${p.date} · ${p.category}</p><h3 class="font-bold mt-2">${p.title}</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-300">${p.description}</p></a>`).join('');
   const total=Math.ceil(posts.length/state.perPage); qs('#pagination').innerHTML='';
   for(let i=1;i<=total;i++){const b=document.createElement('button'); b.textContent=i; b.className='px-3 py-1 rounded '+(i===state.page?'bg-slate-800 text-white':'bg-slate-200'); b.onclick=()=>{state.page=i;render()}; qs('#pagination').appendChild(b);} 
 }
