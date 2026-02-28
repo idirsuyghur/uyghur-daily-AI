@@ -5,6 +5,24 @@
   },
   "posts": [
     {
+      "title": "2026-يىلدىكى ئەڭ داڭلىق AI قوراللىرى سېلىشتۇرمىسى: ChatGPT, Gemini, Claude, Grok, DeepSeek",
+      "slug": "ai-qoralliri-selishturma-chatgpt-gemini-claude-grok-deepseek-2026",
+      "date": "2026-02-28",
+      "category": "سۈنئىي ئەقىل",
+      "tags": [
+        "ChatGPT",
+        "Gemini",
+        "Claude",
+        "Grok",
+        "DeepSeek",
+        "AI سېلىشتۇرۇش",
+        "2026"
+      ],
+      "description": "ChatGPT، Gemini، Claude، Grok ۋە DeepSeek نىڭ ئىقتىدار، باھا، كود يېزىش ۋە كۈندىلىك ئىشلىتىش نۇقتىسىدىن ئەمەلىي سېلىشتۇرمىسى.",
+      "featuredImage": "assets/img/default-cover.svg",
+      "file": "post-ai-tools-comparison-2026.json"
+    },
+    {
       "title": "2026-يىلى ئۈچۈن AI ئۆگىنىش پىلانى: ھەپتىلىك ئىجرا جەدۋىلى بىلەن",
       "slug": "ai-uginish-heptilik-jedwel-2026",
       "date": "2026-02-28",
