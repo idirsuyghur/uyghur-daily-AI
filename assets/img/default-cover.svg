@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <text x="600" y="300" text-anchor="middle" fill="#f8fafc" font-size="72" font-family="Lateef, serif">ئۇيغۇر AI بىلوگى</text>
+  <text x="600" y="370" text-anchor="middle" fill="#cbd5e1" font-size="40" font-family="Lateef, serif">سۈنئىي ئەقىل ۋە تېخنىكا</text>
+</svg>
