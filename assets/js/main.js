@@ -1,4 +1,4 @@
-const state={posts:[],page:1,perPage:6};
+const state={posts:[],page:1,perPage:9};
 const qs=(s)=>document.querySelector(s);
 const toggle=()=>document.documentElement.classList.toggle('dark');
 qs('#themeToggle')?.addEventListener('click',toggle);
