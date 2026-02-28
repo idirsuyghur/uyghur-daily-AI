@@ -12,3 +12,9 @@
 - Working recommendation: apply to Seneca first, George Brown as backup, keep TMU as longer-term option.
 - User location context: Scarborough; Seneca Newnham considered practical for commute.
 - OSAP guidance discussed at high level (yearly application and eligibility-based funding).
+
+## Ongoing project to remember
+- Uyghur AI Blog is an active long-term project the user explicitly asked me not to forget.
+- Repo: https://github.com/idirsuyghur/uyghur-daily-AI.git
+- Site: GitHub Pages deployment for the Uyghur AI blog.
+- Expectation: continue managing content automation, updates, and maintenance.
