@@ -18,3 +18,4 @@
 - Repo: https://github.com/idirsuyghur/uyghur-daily-AI.git
 - Site: GitHub Pages deployment for the Uyghur AI blog.
 - Expectation: continue managing content automation, updates, and maintenance.
+- Preference: carefully preserve all blog-related changes/context and continue work in follow-up sessions (explicitly reaffirmed on 2026-02-28).
