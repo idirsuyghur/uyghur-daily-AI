@@ -5,6 +5,54 @@
   },
   "posts": [
     {
+      "title": "شەرقىي تۈركىستان تارىخىدىكى 3 مۇھىم دەۋر: بۈگۈننى چۈشىنىش ئۈچۈن قىسقىچە يول",
+      "slug": "sherqiy-turkistan-3-muhim-dewr-2026",
+      "date": "2026-02-28",
+      "category": "شەرقىي تۈركىستان",
+      "tags": [
+        "شەرقىي تۈركىستان",
+        "تارىخ",
+        "ئۇيغۇر",
+        "مىللىي كىملىك",
+        "بىلىم"
+      ],
+      "description": "شەرقىي تۈركىستان تارىخىدىكى ئۈچ ئاچقۇچلۇق دەۋرنى چۈشىنىش ئارقىلىق بۈگۈنكى قاراشنى تېخىمۇ ئېنىقلاشتۇرىدىغان ئۇيغۇرچە ماقالە.",
+      "featuredImage": "assets/img/default-cover.svg",
+      "file": "post-sherqiy-turkistan-3-muhim-dewr-2026.json"
+    },
+    {
+      "title": "شەرقىي تۈركىستان توغرىسىدىكى ئۇچۇرلارنى قانداق توغرا تەكشۈرىمىز؟ (5 قەدەم)",
+      "slug": "sherqiy-turkistan-uchur-tekshurush-5-qedem-2026",
+      "date": "2026-02-28",
+      "category": "شەرقىي تۈركىستان",
+      "tags": [
+        "شەرقىي تۈركىستان",
+        "ئۇچۇر سەۋىيىسى",
+        "پاكىت تەكشۈرۈش",
+        "مەنبە",
+        "مېدىيا"
+      ],
+      "description": "شەرقىي تۈركىستانغا دائىر خەۋەر ۋە باياناتلارنى توغرا چۈشۈنۈش ئۈچۈن 5 ئەمەلىي پاكىت-تەكشۈرۈش ئۇسۇلى.",
+      "featuredImage": "assets/img/default-cover.svg",
+      "file": "post-sherqiy-turkistan-uchur-tekshurush-5-qedem-2026.json"
+    },
+    {
+      "title": "شەرقىي تۈركىستان تېمىسىنى ياشلار قانداق ئوقۇشى كېرەك؟ ئەمەلىي ئۆگىنىش پىلانى",
+      "slug": "sherqiy-turkistan-yashlar-ugunush-pilani-2026",
+      "date": "2026-02-28",
+      "category": "شەرقىي تۈركىستان",
+      "tags": [
+        "شەرقىي تۈركىستان",
+        "ياشلار",
+        "ئۆگىنىش پىلانى",
+        "ئۇيغۇرچە",
+        "تارىخ"
+      ],
+      "description": "ياشلار ئۈچۈن شەرقىي تۈركىستان تېمىسىنى سەۋرچان، پاكىتقا تايىنىدىغان ۋە سىستېمىلىق ئۆگىنىشقا ياردەم بېرىدىغان ئەمەلىي پىلان.",
+      "featuredImage": "assets/img/default-cover.svg",
+      "file": "post-sherqiy-turkistan-yashlar-ugunush-pilani-2026.json"
+    },
+    {
       "title": "بىزنىڭ باياناتىمىز: ئۇيغۇر دۆلىتى — ئۆز تەقدىرىنى بەلگىلەش ھەققى",
       "slug": "uyghur-dowleti-oz-teqdirini-belgilash-heqqi",
       "date": "2026-02-28",
