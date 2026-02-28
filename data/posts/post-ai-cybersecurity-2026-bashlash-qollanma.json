@@ -1,0 +1,18 @@
+{
+  "title": "AI بىلەن Cybersecurity نى باشلاش: 2026 ئۈچۈن ئەمەلىي قوللانما",
+  "slug": "ai-cybersecurity-2026-bashlash-qollanma",
+  "date": "2026-02-28",
+  "category": "سۈنئىي ئەقىل",
+  "tags": [
+    "AI",
+    "Cybersecurity",
+    "Python",
+    "SOC",
+    "SIEM",
+    "باشلىغۇچى"
+  ],
+  "description": "AI ۋە Cybersecurity نى بىرلەشتۈرۈپ ئۆگىنىش ئۈچۈن 90 كۈنلۈك پىلان، لازىملىق قوراللار ۋە ئەمەلىي تۈر يولى.",
+  "featuredImage": "assets/img/default-cover.svg",
+  "file": "post-ai-cybersecurity-2026-bashlash-qollanma.json",
+  "contentHtml": "<h1>AI بىلەن Cybersecurity نى باشلاش: 2026 ئۈچۈن ئەمەلىي قوللانما</h1><p>2026-يىلىدا cybersecurity ساھەسىدە AI نىڭ رولى تېخىمۇ زور بولدى. باشلىغۇچىلار ئۈچۈن توغرا يول: پەقەت قورال ئىشلەتكىلىلا ئەمەس، ئاساسنى پۇختا قىلىپ ئاندىن AI نى قوشۇش.</p><h2>1) نېمە ئۈچۈن AI + Cybersecurity؟</h2><ul><li>log ۋە alert نى تېز تەھلىل قىلىش</li><li>phishing ۋە زىيانلىق مەزمۇننى تېزرەك پەرق قىلىش</li><li>SOC خىزمىتىدە automation نى ئاشۇرۇش</li></ul><h2>2) لازىملىق ئاساس (1-ئاي)</h2><ul><li>Network ئاساسى: IP, DNS, HTTP, TLS</li><li>Linux ئاساسى: file/process/permissions</li><li>Python ئاساسى: list, dict, function, json</li></ul><h2>3) AI قورال قەۋىتى (2-ئاي)</h2><ul><li>Log summarize script (Python + LLM API)</li><li>IOC extraction (domain/ip/hash نى text دىن چىقىرىش)</li><li>Basic prompt templates (incident summary, triage note)</li></ul><h2>4) تۈر قەۋىتى (3-ئاي)</h2><p>كىچىك portfolio تۈر قۇرۇڭ: «SOC Alert Assistant» — raw log نى كىرگۈزۈپ، risk score + قىسقا چۈشەندۈرۈش + next step چىقىرىدىغان script.</p><h2>5) 90 كۈنلۈك پىلان</h2><p><strong>1–30 كۈن:</strong> network + linux + python.<br/><strong>31–60 كۈن:</strong> AI API بىلەن 2 كىچىك tool.<br/><strong>61–90 كۈن:</strong> GitHub دا بىر تولۇق mini-project + README + demo.</p><h2>خۇلاسە</h2><p>Cybersecurity دا AI نى ئۈنۈملۈك ئىشلىتىشنىڭ ئاچقۇچى — ئاساسنى چىڭ تۇتۇش ۋە تۈر بىلەن ئىسپاتلاش. مۇناسىۋەتلىك مەزمۇن: <a href='category.html?name=سۈنئىي ئەقىل'>سۈنئىي ئەقىل</a> ۋە <a href='category.html?name=پروگرامما تۈزۈش'>پروگرامما تۈزۈش</a>.</p>"
+}

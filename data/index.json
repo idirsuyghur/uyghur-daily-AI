@@ -5,6 +5,23 @@
   },
   "posts": [
     {
+      "title": "AI بىلەن Cybersecurity نى باشلاش: 2026 ئۈچۈن ئەمەلىي قوللانما",
+      "slug": "ai-cybersecurity-2026-bashlash-qollanma",
+      "date": "2026-02-28",
+      "category": "سۈنئىي ئەقىل",
+      "tags": [
+        "AI",
+        "Cybersecurity",
+        "Python",
+        "SOC",
+        "SIEM",
+        "باشلىغۇچى"
+      ],
+      "description": "AI ۋە Cybersecurity نى بىرلەشتۈرۈپ ئۆگىنىش ئۈچۈن 90 كۈنلۈك پىلان، لازىملىق قوراللار ۋە ئەمەلىي تۈر يولى.",
+      "featuredImage": "assets/img/default-cover.svg",
+      "file": "post-ai-cybersecurity-2026-bashlash-qollanma.json"
+    },
+    {
       "title": "2026-02-28 كۈنىدىكى تېخنىكا تېمىسىدىكى يېڭى ماقالە",
       "slug": "post-2026-02-28",
       "date": "2026-02-28",
