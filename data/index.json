@@ -5,6 +5,85 @@
   },
   "posts": [
     {
+      "title": "ئۇيغۇر مەدەنىيىتىنى ساقلاش: تىل ۋە مىراسنى كۈندىلىك ھاياتتا داۋاملاشتۇرۇش",
+      "slug": "uyghurmedeniyiti-til-mirasini-saqlesh-2026",
+      "date": "2026-02-28",
+      "category": "ئۇيغۇر مەدەنىيىتى",
+      "tags": [
+        "ئۇيغۇر مەدەنىيىتى",
+        "ئانا تىل",
+        "مىراس",
+        "ئائىلە",
+        "مائارىپ"
+      ],
+      "description": "ئۇيغۇر تىلى ۋە مەدەنىي مىراسنى ئائىلە، مەكتەپ ۋە جەمئىيەتتە قوغداشنىڭ ئەمەلىي ئۇسۇللىرى.",
+      "featuredImage": "assets/img/default-cover.svg",
+      "file": "post-uyghurmedeniyiti-til-mirasini-saqlesh-2026.json"
+    },
+    {
+      "title": "مۇستەقىللىق ئويى ۋە مىللىي ھېسسىيات: ياشلار نېمىنى بىلىشى كېرەك؟",
+      "slug": "musteqilliq-oyi-we-milliy-hissiyat-2026",
+      "date": "2026-02-28",
+      "category": "شەرقىي تۈركىستان",
+      "tags": [
+        "مۇستەقىللىق",
+        "مىللىي كىملىك",
+        "ئۇيغۇر ياشلىرى",
+        "تارىخ",
+        "ئاڭ"
+      ],
+      "description": "مۇستەقىللىق ئويىنىڭ تارىخىي مەنىسى، مىللىي كىملىك ۋە ياشلارنىڭ مەسئۇلىيىتى ھەققىدە چۈشىنىشلىك بايان.",
+      "featuredImage": "assets/img/default-cover.svg",
+      "file": "post-musteqilliq-oyi-we-milliy-hissiyat-2026.json"
+    },
+    {
+      "title": "ئۇيغۇر ئۆرپ-ئادەتلىرى ۋە زامانىۋى ھايات: ئىككىسىنى قانداق تەڭپۇڭلايمىز؟",
+      "slug": "uyghur-oren-adetliri-we-zamanevi-hayat-2026",
+      "date": "2026-02-28",
+      "category": "ئۇيغۇر مەدەنىيىتى",
+      "tags": [
+        "ئۆرپ-ئادەت",
+        "ئۇيغۇر مەدەنىيىتى",
+        "زامانىۋى ھايات",
+        "ئائىلە",
+        "جەمئىيەت"
+      ],
+      "description": "ئۇيغۇر ئۆرپ-ئادەتلىرىنى زامانىۋى تۇرمۇش بىلەن ماسلاشتۇرۇپ داۋاملاشتۇرۇشنىڭ ئەمەلىي يوللىرى.",
+      "featuredImage": "assets/img/default-cover.svg",
+      "file": "post-uyghur-oren-adetliri-we-zamanevi-hayat-2026.json"
+    },
+    {
+      "title": "شەرقىي تۈركىستان تارىخىدا مۇستەقىللىق قارىشى: قىسقىچە تونۇش",
+      "slug": "sherqiyturkistan-tarixta-musteqilliq-qarishi-2026",
+      "date": "2026-02-28",
+      "category": "ئۇيغۇر تارىخى",
+      "tags": [
+        "شەرقىي تۈركىستان",
+        "مۇستەقىللىق",
+        "ئۇيغۇر تارىخى",
+        "مىللىي كىملىك"
+      ],
+      "description": "شەرقىي تۈركىستان تارىخىدا مۇستەقىللىق قارىشىنىڭ شەكىللىنىشى ۋە بۈگۈنكى ئاڭغا بولغان تەسىرى.",
+      "featuredImage": "assets/img/default-cover.svg",
+      "file": "post-sherqiyturkistan-tarixta-musteqilliq-qarishi-2026.json"
+    },
+    {
+      "title": "ئۇيغۇر مەدەنىيىتىنى كېلەركى ئەۋلادقا قانداق قالدۇرىمىز؟",
+      "slug": "uyghurmedeniyiti-kelgusi-evlatqa-qaldurush-2026",
+      "date": "2026-02-28",
+      "category": "ئۇيغۇر مەدەنىيىتى",
+      "tags": [
+        "ئۇيغۇر مەدەنىيىتى",
+        "بالىلار",
+        "ئەۋلاد",
+        "تىل",
+        "مائارىپ"
+      ],
+      "description": "كېلەركى ئەۋلادقا ئۇيغۇر تىلى، تارىخى ۋە مەدەنىي قىممەتلەرنى قانداق يەتكۈزۈش توغرىسىدىكى ئەمەلىي چارىلەر.",
+      "featuredImage": "assets/img/default-cover.svg",
+      "file": "post-uyghurmedeniyiti-kelgusi-evlatqa-qaldurush-2026.json"
+    },
+    {
       "title": "2026-يىلدىكى ئەڭ داڭلىق AI قوراللىرى سېلىشتۇرمىسى: ChatGPT, Gemini, Claude, Grok, DeepSeek",
       "slug": "ai-qoralliri-selishturma-chatgpt-gemini-claude-grok-deepseek-2026",
       "date": "2026-02-28",
