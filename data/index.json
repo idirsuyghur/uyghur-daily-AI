@@ -5,6 +5,23 @@
   },
   "posts": [
     {
+      "title": "2026-يىلى ئۈچۈن AI ئۆگىنىش پىلانى: ھەپتىلىك ئىجرا جەدۋىلى بىلەن",
+      "slug": "ai-uginish-heptilik-jedwel-2026",
+      "date": "2026-02-28",
+      "category": "سۈنئىي ئەقىل",
+      "tags": [
+        "AI",
+        "ئۆگىنىش پىلانى",
+        "Python",
+        "ChatGPT",
+        "GitHub",
+        "ئۇيغۇرچە"
+      ],
+      "description": "سۈنئىي ئەقىلنى پىلانلىق ئۆگىنىش ئۈچۈن ھەپتىلىك جەدۋەل، قورال تاللاش ۋە تۈر قۇرۇش باسقۇچلىرىنى ئۆز ئىچىگە ئالغان ئەمەلىي ماقالە.",
+      "featuredImage": "assets/img/post-ai-study-plan.svg",
+      "file": "post-ai-uginish-heptilik-jedwel-2026.json"
+    },
+    {
       "title": "ئانا تىلنى ساقلاپ قېلىش: ھەر بىر ئائىلە باشلىيالايدىغان 12 ئەمەلىي قەدەم",
       "slug": "ana-tilni-saqlash-12-emeley-qedem",
       "date": "2026-02-28",
