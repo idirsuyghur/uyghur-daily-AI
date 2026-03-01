@@ -12,6 +12,7 @@
 - Working recommendation: apply to Seneca first, George Brown as backup, keep TMU as longer-term option.
 - User location context: Scarborough; Seneca Newnham considered practical for commute.
 - OSAP guidance discussed at high level (yearly application and eligibility-based funding).
+- Active reminder: user asked me to remember their upcoming English test.
 
 ## Ongoing project to remember
 - Uyghur AI Blog is an active long-term project the user explicitly asked me not to forget.
