@@ -8,103 +8,55 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#0b1020;
-      --bg2:#131a31;
-      --card:#ffffff14;
-      --line:#ffffff2e;
-      --text:#e8ecff;
-      --muted:#c6cee9;
-      --gold:#f4b64f;
-      --gold2:#e9972f;
-    }
+    :root{--bg:#0b1020;--bg2:#131a31;--card:#ffffff14;--line:#ffffff2e;--text:#e8ecff;--muted:#c6cee9;--gold:#f4b64f;--gold2:#e9972f}
     *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:'Inter',sans-serif;
-      color:var(--text);
-      background: radial-gradient(1200px 600px at 85% -10%, #2a3567 0%, transparent 50%),
-                  radial-gradient(900px 500px at -10% 20%, #24305f 0%, transparent 45%),
-                  linear-gradient(135deg,var(--bg),var(--bg2));
-    }
+    body{margin:0;font-family:'Inter',sans-serif;color:var(--text);background:radial-gradient(1200px 600px at 85% -10%, #2a3567 0%, transparent 50%),radial-gradient(900px 500px at -10% 20%, #24305f 0%, transparent 45%),linear-gradient(135deg,var(--bg),var(--bg2))}
     .wrap{max-width:1160px;margin:auto;padding:20px}
-
-    .nav{
-      position:sticky;top:12px;z-index:10;
-      backdrop-filter: blur(10px);
-      background:#0f1735b8;
-      border:1px solid var(--line);
-      border-radius:16px;
-      box-shadow:0 10px 35px #00000038;
-    }
-    .nav-inner{display:flex;justify-content:space-between;align-items:center;padding:12px 18px}
-    .brand{font-family:'Playfair Display',serif;font-size:24px;font-weight:800;color:#fff;text-decoration:none;letter-spacing:.5px}
-    .menu{display:flex;gap:18px;flex-wrap:wrap}
+    .nav{position:sticky;top:12px;z-index:10;backdrop-filter:blur(10px);background:#0f1735b8;border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 35px #00000038}
+    .nav-inner{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff}
+    .brand img{height:36px;width:auto;filter:drop-shadow(0 1px 1px #000)}
+    .brand span{font-family:'Playfair Display',serif;font-size:22px;font-weight:800;letter-spacing:.4px}
+    .menu{display:flex;gap:16px;flex-wrap:wrap}
     .menu a{color:#dce3ff;text-decoration:none;font-weight:600;font-size:14px}
-
-    .hero{
-      margin-top:16px;
-      min-height:500px;
-      border-radius:24px;
-      overflow:hidden;
-      position:relative;
-      border:1px solid var(--line);
-      box-shadow:0 20px 60px #00000050;
-      display:flex;align-items:flex-end;
-    }
+    .hero{margin-top:16px;min-height:500px;border-radius:24px;overflow:hidden;position:relative;border:1px solid var(--line);box-shadow:0 20px 60px #00000050;display:flex;align-items:flex-end}
     .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.1)}
-    .hero:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#00000030,#0000009a)}
+    .hero:before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#00000035,#0000009a)}
     .hero-content{position:relative;z-index:2;padding:38px;max-width:760px}
     .eyebrow{display:inline-block;background:#ffffff1c;border:1px solid #ffffff55;border-radius:30px;padding:7px 12px;font-size:12px;font-weight:700;margin-bottom:10px}
     h1{font-family:'Playfair Display',serif;font-size:54px;line-height:1.05;margin:0 0 10px}
-    .sub{color:#ecf1ffcf;font-size:17px}
-    .chips{margin-top:14px;color:#ffe7bd;font-weight:600}
-
+    .sub{color:#ecf1ffcf;font-size:17px}.chips{margin-top:14px;color:#ffe7bd;font-weight:600}
     .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
     .btn{padding:11px 16px;border-radius:12px;text-decoration:none;font-weight:800;font-size:14px;border:1px solid transparent}
-    .btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1f1302}
-    .btn-dark{background:#121b38;color:#fff;border-color:#ffffff3b}
-    .btn-light{background:#fff;color:#101935}
-
+    .btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1f1302}.btn-dark{background:#121b38;color:#fff;border-color:#ffffff3b}.btn-light{background:#fff;color:#101935}
     .section{margin-top:30px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px}
     h2{font-family:'Playfair Display',serif;font-size:34px;margin:0 0 14px}
-
-    .slider{position:relative;border-radius:16px;overflow:hidden}
-    .slides{display:flex;transition:transform .45s ease}
-    .slide{min-width:100%;height:360px;position:relative}
-    .slide img{width:100%;height:100%;object-fit:cover;filter:brightness(.8)}
+    .slider{position:relative;border-radius:16px;overflow:hidden}.slides{display:flex;transition:transform .45s ease}.slide{min-width:100%;height:360px;position:relative}.slide img{width:100%;height:100%;object-fit:cover;filter:brightness(.8)}
     .cap{position:absolute;left:16px;bottom:16px;background:#0a1030cc;border:1px solid #ffffff44;padding:10px 12px;border-radius:10px;font-weight:700}
-    .navb{position:absolute;top:50%;transform:translateY(-50%);border:0;padding:8px 12px;border-radius:10px;background:#ffffffd9;cursor:pointer;font-size:20px}
-    .prev{left:10px}.next{right:10px}
-
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-    .card{background:#0f1735c7;border:1px solid #ffffff2e;border-radius:14px;padding:14px}
-    .card h3{margin:0 0 7px;color:#fff}
-    .card p{margin:0;color:#d7def9}
-    .price{margin-top:8px;color:#ffd483;font-weight:800}
-
-    .menu-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
-    .pill{padding:11px 12px;border:1px solid #ffffff33;border-radius:12px;background:#101936;color:#fff;font-weight:700}
-
+    .navb{position:absolute;top:50%;transform:translateY(-50%);border:0;padding:8px 12px;border-radius:10px;background:#ffffffd9;cursor:pointer;font-size:20px}.prev{left:10px}.next{right:10px}
+    .menu-toolbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+    .tab{padding:8px 12px;border:1px solid #ffffff44;background:#101936;color:#fff;border-radius:999px;cursor:pointer;font-weight:700;font-size:13px}
+    .tab.active{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#231300;border-color:transparent}
+    .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+    .item{background:#0f1735cc;border:1px solid #ffffff2e;border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;gap:10px}
+    .item b{font-size:14px}.item span{color:#ffd483;font-weight:800;white-space:nowrap}
+    .hint{color:#cbd5ff;font-size:13px;margin-top:10px}
     .footer{margin:26px 0 70px;text-align:center;color:#c9d2f5}
-
     .sticky{position:fixed;bottom:0;left:0;right:0;background:#0f1735ed;border-top:1px solid #ffffff3b;display:flex;justify-content:space-around;padding:10px 0;z-index:50}
     .sticky a{text-decoration:none;color:#fff;font-weight:800}
-    @media(min-width:900px){.sticky{display:none}}
-    @media(max-width:800px){h1{font-size:38px}}
+    @media(min-width:900px){.sticky{display:none}} @media(max-width:800px){h1{font-size:38px}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <nav class="nav">
       <div class="nav-inner">
-        <a class="brand" href="#">Falcha</a>
+        <a class="brand" href="#">
+          <img src="https://falcha.ca/logo.png" alt="Falcha logo">
+          <span>Falcha</span>
+        </a>
         <div class="menu">
-          <a href="#">Home</a>
-          <a href="#menu">Menu</a>
-          <a href="#specials">Specials</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
+          <a href="#">Home</a><a href="#menu">Menu</a><a href="#specials">Specials</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
         </div>
       </div>
     </nav>
@@ -114,11 +66,11 @@
       <div class="hero-content">
         <div class="eyebrow">SCARBOROUGH • AUTHENTIC NEWARI CUISINE</div>
         <h1>Where Culture Meets Flavor</h1>
-        <div class="sub">A premium dining experience with signature Newari dishes, quick online ordering, and warm hospitality.</div>
+        <div class="sub">Premium dining feel with signature Newari dishes, fast online ordering, and warm hospitality.</div>
         <div class="chips">⭐ 4.6 Rating · 📍 3095 Eglinton Ave E Unit 3 · 🕒 Open Daily</div>
         <div class="btns">
-          <a class="btn btn-primary" href="#">Order Now</a>
-          <a class="btn btn-light" href="#menu">View Menu</a>
+          <a class="btn btn-primary" href="#menu">Order Now</a>
+          <a class="btn btn-light" href="#menu">View Full Menu</a>
           <a class="btn btn-dark" href="tel:+16474388239">Call</a>
         </div>
       </div>
@@ -126,36 +78,27 @@
 
     <section class="section" id="gallery">
       <h2>Featured Dishes</h2>
-      <div class="slider">
-        <div class="slides" id="slides">
-          <div class="slide"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1800&auto=format&fit=crop"><div class="cap">Samaya Baji Set — Bestseller</div></div>
-          <div class="slide"><img src="https://images.unsplash.com/photo-1534939561126-855b8675edd7?q=80&w=1800&auto=format&fit=crop"><div class="cap">Choila & House Specials</div></div>
-          <div class="slide"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1800&auto=format&fit=crop"><div class="cap">Family Combos & Shared Plates</div></div>
-        </div>
-        <button class="navb prev" onclick="move(-1)">‹</button>
-        <button class="navb next" onclick="move(1)">›</button>
-      </div>
+      <div class="slider"><div class="slides" id="slides">
+        <div class="slide"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1800&auto=format&fit=crop"><div class="cap">Samaya Baji Set — Bestseller</div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1534939561126-855b8675edd7?q=80&w=1800&auto=format&fit=crop"><div class="cap">Choila & House Specials</div></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1800&auto=format&fit=crop"><div class="cap">Family Combos & Shared Plates</div></div>
+      </div><button class="navb prev" onclick="move(-1)">‹</button><button class="navb next" onclick="move(1)">›</button></div>
     </section>
 
     <section class="section" id="menu">
-      <h2>Quick Menu</h2>
-      <div class="menu-list">
-        <div class="pill">Starters</div>
-        <div class="pill">Main Courses</div>
-        <div class="pill">Set Meals</div>
-        <div class="pill">Drinks</div>
-        <div class="pill">Desserts</div>
-        <div class="pill">Chef Specials</div>
-      </div>
+      <h2>Full Menu (Demo with Real Falcha Items)</h2>
+      <div class="menu-toolbar" id="tabs"></div>
+      <div class="menu-grid" id="menuGrid"></div>
+      <div class="hint">Menu sourced from Falcha menu content for demo planning. Final pricing/items should be owner-confirmed before publish. <a href="https://falcha.ca/Falcha%20Full%20Menu.pdf" target="_blank" style="color:#ffd483">Open original PDF</a></div>
     </section>
 
     <section class="section" id="specials">
       <h2>Best Sellers</h2>
-      <div class="grid">
-        <div class="card"><h3>Samaya Baji Set</h3><p>Traditional Newari platter.</p><div class="price">$18.99</div></div>
-        <div class="card"><h3>Aalu Taama</h3><p>Potato, bamboo shoot, black-eyed peas.</p><div class="price">$13.99</div></div>
-        <div class="card"><h3>Choila</h3><p>Spicy grilled meat, house style.</p><div class="price">$14.99</div></div>
-        <div class="card"><h3>Newari Khaja Set</h3><p>Festive balanced set.</p><div class="price">$19.99</div></div>
+      <div class="menu-grid">
+        <div class="item"><b>Samaya Baji Set</b><span>$18.99</span></div>
+        <div class="item"><b>Aalu Taama</b><span>$13.99</span></div>
+        <div class="item"><b>Chicken Choila</b><span>$13.99</span></div>
+        <div class="item"><b>Buff Choila</b><span>$15.99</span></div>
       </div>
     </section>
 
@@ -163,25 +106,60 @@
       <h2>Visit Falcha</h2>
       <p>3095 Eglinton Ave E Unit 3, Scarborough, ON</p>
       <p><b>Phone:</b> (647) 438-8239</p>
-      <div class="btns">
-        <a class="btn btn-primary" href="#">Get Directions</a>
-        <a class="btn btn-dark" href="#">Reserve</a>
-      </div>
+      <div class="btns"><a class="btn btn-primary" href="#">Get Directions</a><a class="btn btn-dark" href="#">Reserve</a></div>
     </section>
 
-    <div class="footer">Modern demo concept for Falcha — fancy font, premium style, and stronger conversion flow.</div>
+    <div class="footer">Modern demo concept for Falcha — real logo + full menu layout + premium style.</div>
   </div>
 
-  <div class="sticky">
-    <a href="#">Order</a>
-    <a href="tel:+16474388239">Call</a>
-    <a href="#">Directions</a>
-  </div>
+  <div class="sticky"><a href="#menu">Order</a><a href="tel:+16474388239">Call</a><a href="#contact">Directions</a></div>
 
   <script>
     let i=0; const slides=document.getElementById('slides'); const total=3;
     function move(step){ i=(i+step+total)%total; slides.style.transform=`translateX(-${i*100}%)`; }
     setInterval(()=>move(1),4200);
+
+    const data={
+      "Non-Veg Appetizers":[
+        ["Pangra Fry","$12.99"],["Chicken Choila","$13.99"],["Khasi ko Bhutan","$15.99"],["Buff Sukuti Fried","$15.99"],["Buff Sukuti Sadheko","$11.99"],["Buff Choila","$15.99"],["Buff Chilly","$14.99"],["Pork Chilly","$13.99"],["Chicken Sausage Fry","$5.99"],["Chicken Sausage Chilly","$10.99"],["Bhura Machha Fry","$13.99"]
+      ],
+      "Veg Appetizers":[
+        ["Pani Puri","$9.99"],["Dahi Puri","$9.99"],["Chatpatey","$9.99"],["Wai Wai Sadeko","$9.99"],["Aloo Chop","$9.99"],["Peanuts Sadeko","$9.99"],["Alu Sadeko","$9.99"],["Bhatmas Sadeko","$9.99"],["Laphing","$9.99"],["Tofu Sticks","$8.99"],["Plain Bara","$9.99"],["Mustang Aloo","$9.99"],["Masala Papaad","$9.99"],["Mushroom Choila","$12.99"],["Papdi Chaat (Nepali Style)","$9.99"]
+      ],
+      "Momo":[
+        ["Chicken Momo (Steam)","$13.99"],["Chicken Momo (Kothey)","$13.99"],["Chicken Momo (Jhol)","$14.99"],["Chicken Momo (Chilly)","$14.99"],["Chicken Momo (Fried)","$14.99"],
+        ["Buff Momo (Steam)","$15.99"],["Buff Momo (Kothey)","$15.99"],["Buff Momo (Jhol)","$16.99"],["Buff Momo (Chilly)","$16.99"],["Buff Momo (Fried)","$16.99"],
+        ["Veg Momo (Steam)","$12.99"],["Veg Momo (Kothey)","$12.99"],["Veg Momo (Jhol)","$13.99"],["Veg Momo (Chilly)","$13.99"],["Veg Momo (Fried)","$13.99"]
+      ],
+      "Warm Bowls & Specials":[
+        ["Aloo Tama","$9.99"],["Yomari (2 pcs)","$9.99"],["Yomari (3 pcs)","$12.99"],["Yomari (4 pcs)","$15.99"],["Veg Thukpa","$12.99"],["Chicken Thukpa","$13.99"],["Veg Chowmien","$13.99"],["Chicken Chowmien","$14.99"]
+      ]
+    };
+
+    const tabs=document.getElementById('tabs');
+    const grid=document.getElementById('menuGrid');
+    const keys=Object.keys(data);
+    let current=keys[0];
+
+    function renderTabs(){
+      tabs.innerHTML='';
+      keys.forEach(k=>{
+        const b=document.createElement('button');
+        b.className='tab'+(k===current?' active':'');
+        b.textContent=k;
+        b.onclick=()=>{current=k;renderTabs();renderMenu();};
+        tabs.appendChild(b);
+      })
+    }
+    function renderMenu(){
+      grid.innerHTML='';
+      data[current].forEach(([name,price])=>{
+        const d=document.createElement('div'); d.className='item';
+        d.innerHTML=`<b>${name}</b><span>${price}</span>`;
+        grid.appendChild(d);
+      })
+    }
+    renderTabs(); renderMenu();
   </script>
 </body>
 </html>
