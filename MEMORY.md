@@ -20,3 +20,8 @@
 - Site: GitHub Pages deployment for the Uyghur AI blog.
 - Expectation: continue managing content automation, updates, and maintenance.
 - Preference: carefully preserve all blog-related changes/context and continue work in follow-up sessions (explicitly reaffirmed on 2026-02-28).
+
+## New business plan to track
+- User wants to start a local web-design sales workflow focused on Scarborough restaurants.
+- Plan: identify restaurants with weak/ugly websites, create redesign demos, show owners, then sell full rebuild + maintenance.
+- Action preference: treat this as an ongoing project and continue execution in follow-up sessions.
