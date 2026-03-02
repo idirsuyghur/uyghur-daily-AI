@@ -5,6 +5,23 @@
   },
   "posts": [
     {
+      "title": "ئىران ئۇرۇشى: رايون بىخەتەرلىكى، ئېنېرگىيە بازىرى ۋە چوڭ دۆلەتلەر رىقابىتى",
+      "slug": "iran-urushi-rayon-bixeterliki-energiye-rikabet-2026",
+      "date": "2026-03-02",
+      "category": "شەرقىي تۈركىستان",
+      "tags": [
+        "ئىران ئۇرۇشى",
+        "ئوتتۇرا شەرق",
+        "ئېنېرگىيە بازىرى",
+        "جۇغراپىيەلىك سىياسەت",
+        "ئامېرىكا",
+        "خىتاي"
+      ],
+      "description": "ئىران ئۇرۇشىنىڭ رايون بىخەتەرلىكى، نېفىت-گاز باھاسى ۋە چوڭ دۆلەتلەر ئارا ستراتېگىيەلىك رىقابەتكە كۆرسىتىدىغان تەسىرى ھەققىدە تەھلىلىي ماقالە.",
+      "featuredImage": "assets/img/default-cover.svg",
+      "file": "post-iran-urushi-rayon-bixeterliki-energiye-rikabet-2026.json"
+    },
+    {
       "title": "رەقەملىك دەۋردە ئىشەنچلىك خەۋەرنى تونۇش: مەنبە تەكشۈرۈشنىڭ 8 رەسمىي ئۆلچىمى",
       "slug": "rekemlik-dewrde-ishenchlik-xewer-tonush-8-olcham",
       "date": "2026-03-02",
