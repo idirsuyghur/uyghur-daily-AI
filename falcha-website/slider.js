@@ -16,8 +16,38 @@
 
     const AUTOPLAY_MS = 4000;
 
+    function ensureSliderFallbackStyles() {
+        const test = document.createElement('div');
+        test.className = 'fsl-slide';
+        document.body.appendChild(test);
+        const pos = getComputedStyle(test).position;
+        test.remove();
+        if (pos === 'absolute') return; // styles already active
+
+        const css = `
+#falchaSlider{position:relative;width:100%;aspect-ratio:16/7;overflow:hidden;background:#050810}
+@media (max-width:640px){#falchaSlider{aspect-ratio:4/3}}
+.fsl-track{position:relative;width:100%;height:100%}
+.fsl-slide{position:absolute;inset:0;opacity:0;pointer-events:none}
+.fsl-slide.fsl-active{opacity:1;pointer-events:auto;z-index:1}
+.fsl-slide img{width:100%;height:100%;object-fit:cover;display:block}
+.fsl-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(8,12,24,.55);color:#fff;cursor:pointer}
+.fsl-prev{left:12px}.fsl-next{right:12px}
+.fsl-dots{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:8px}
+.fsl-dot{width:8px;height:8px;border-radius:50%;border:0;background:rgba(255,255,255,.45)}
+.fsl-dot.active{background:#f5b843;width:22px;border-radius:6px}
+.fsl-counter{position:absolute;top:10px;right:12px;z-index:10;background:rgba(8,12,24,.5);padding:3px 9px;border-radius:999px;color:#fff;font-size:12px}
+`;
+        const style = document.createElement('style');
+        style.id = 'fsl-fallback-style';
+        style.textContent = css;
+        document.head.appendChild(style);
+    }
+
+
     // ── Build DOM ─────────────────────────────────────────────────────────────
     function buildSlider() {
+        ensureSliderFallbackStyles();
         const root = document.getElementById('falchaSlider');
         if (!root) return;
 
