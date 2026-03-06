@@ -1,22 +1,108 @@
-const state={posts:[],page:1,perPage:9};
-const qs=(s)=>document.querySelector(s);
-const toggle=()=>document.documentElement.classList.toggle('dark');
-qs('#themeToggle')?.addEventListener('click',toggle);
+const state = { posts: [], page: 1, perPage: 9 };
+const qs = (s) => document.querySelector(s);
+const norm = (v) => (v || '').toString().toLowerCase();
 
-fetch('data/index.json').then(r=>r.json()).then(data=>{state.posts=data.posts;initFilters();render();});
-function initFilters(){
-  const sel=qs('#categoryFilter');
-  [...new Set(state.posts.map(p=>p.category))].forEach(c=>{const o=document.createElement('option');o.value=c;o.textContent=c;sel.appendChild(o)});
-  qs('#searchInput').addEventListener('input',()=>{state.page=1;render()});
-  sel.addEventListener('change',()=>{state.page=1;render()});
+qs('#themeToggle')?.addEventListener('click', () => {
+  document.documentElement.classList.toggle('dark');
+});
+
+fetch('data/index.json')
+  .then((r) => r.json())
+  .then((data) => {
+    state.posts = Array.isArray(data.posts) ? data.posts : [];
+    initFilters();
+    render();
+  });
+
+function initFilters() {
+  const categorySel = qs('#categoryFilter');
+  const tagSel = qs('#tagFilter');
+
+  [...new Set(state.posts.map((p) => p.category).filter(Boolean))]
+    .sort((a, b) => a.localeCompare(b))
+    .forEach((c) => {
+      const o = document.createElement('option');
+      o.value = c;
+      o.textContent = c;
+      categorySel.appendChild(o);
+    });
+
+  [...new Set(state.posts.flatMap((p) => (Array.isArray(p.tags) ? p.tags : [])).filter(Boolean))]
+    .sort((a, b) => a.localeCompare(b))
+    .forEach((t) => {
+      const o = document.createElement('option');
+      o.value = t;
+      o.textContent = `#${t}`;
+      tagSel.appendChild(o);
+    });
+
+  qs('#searchInput')?.addEventListener('input', () => {
+    state.page = 1;
+    render();
+  });
+  categorySel?.addEventListener('change', () => {
+    state.page = 1;
+    render();
+  });
+  tagSel?.addEventListener('change', () => {
+    state.page = 1;
+    render();
+  });
 }
-function filtered(){
-  const q=qs('#searchInput').value.trim(); const c=qs('#categoryFilter').value;
-  return state.posts.filter(p=>(!c||p.category===c)&&(!q||(`${p.title} ${p.tags.join(' ')}`).includes(q))).sort((a,b)=>b.date.localeCompare(a.date));
+
+function filtered() {
+  const q = norm(qs('#searchInput')?.value.trim());
+  const c = qs('#categoryFilter')?.value;
+  const t = qs('#tagFilter')?.value;
+
+  return state.posts
+    .filter((p) => {
+      const inCategory = !c || p.category === c;
+      const hasTag = !t || (Array.isArray(p.tags) && p.tags.includes(t));
+      const hay = norm(`${p.title || ''} ${p.description || ''} ${(p.tags || []).join(' ')}`);
+      const inSearch = !q || hay.includes(q);
+      return inCategory && hasTag && inSearch;
+    })
+    .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 }
-function render(){
-  const posts=filtered(), start=(state.page-1)*state.perPage;
-  qs('#postsGrid').innerHTML=posts.slice(start,start+state.perPage).map(p=>`<a href="post.html?slug=${p.slug}" class="bg-white dark:bg-slate-900 rounded-2xl shadow overflow-hidden hover:-translate-y-1 transition"><img src="${p.featuredImage || 'assets/img/default-cover.svg'}" alt="${p.title}" class="w-full h-40 object-cover"/><div class="p-4"><p class="text-xs text-slate-500">${p.date} · ${p.category}</p><h3 class="font-bold mt-2">${p.title}</h3><p class="mt-2 text-sm text-slate-600 dark:text-slate-300">${p.description}</p></div></a>`).join('');
-  const total=Math.ceil(posts.length/state.perPage); qs('#pagination').innerHTML='';
-  for(let i=1;i<=total;i++){const b=document.createElement('button'); b.textContent=i; b.className='px-3 py-1 rounded '+(i===state.page?'bg-slate-800 text-white':'bg-slate-200'); b.onclick=()=>{state.page=i;render()}; qs('#pagination').appendChild(b);} 
+
+function card(post) {
+  return `<a href="post.html?slug=${post.slug}" class="bg-white dark:bg-slate-900 rounded-2xl shadow overflow-hidden hover:-translate-y-1 transition">
+    <img src="${post.featuredImage || 'assets/img/default-cover.svg'}" alt="${post.title}" class="w-full h-40 object-cover"/>
+    <div class="p-4">
+      <p class="text-xs text-slate-500">${post.date || ''} · ${post.category || ''}</p>
+      <h3 class="font-bold mt-2">${post.title || ''}</h3>
+      <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">${post.description || ''}</p>
+    </div>
+  </a>`;
+}
+
+function render() {
+  const posts = filtered();
+  const start = (state.page - 1) * state.perPage;
+  const pagePosts = posts.slice(start, start + state.perPage);
+
+  qs('#resultsMeta').textContent = `${posts.length} ماقالە تېپىلدى`;
+  qs('#postsGrid').innerHTML = pagePosts.length
+    ? pagePosts.map(card).join('')
+    : '<div class="col-span-full text-center py-12 text-slate-500">ماس كېلىدىغان ماقالە تېپىلمىدى.</div>';
+
+  const total = Math.ceil(posts.length / state.perPage);
+  const pagination = qs('#pagination');
+  pagination.innerHTML = '';
+
+  for (let i = 1; i <= total; i++) {
+    const b = document.createElement('button');
+    b.textContent = i;
+    b.className =
+      'px-3 py-1 rounded ' +
+      (i === state.page
+        ? 'bg-slate-800 text-white dark:bg-slate-200 dark:text-slate-900'
+        : 'bg-slate-200 dark:bg-slate-700');
+    b.onclick = () => {
+      state.page = i;
+      render();
+    };
+    pagination.appendChild(b);
+  }
 }

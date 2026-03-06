@@ -35,12 +35,16 @@
 </header>
 
 <main class="max-w-6xl mx-auto px-4 py-8">
-  <div class="grid md:grid-cols-3 gap-4 mb-6">
+  <div class="grid md:grid-cols-4 gap-4 mb-3">
     <input id="searchInput" class="md:col-span-2 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3" placeholder="ماقالە ئىزدەش..."/>
     <select id="categoryFilter" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3">
       <option value="">ھەممە كاتېگورىيە</option>
     </select>
+    <select id="tagFilter" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3">
+      <option value="">ھەممە بەلگە (tag)</option>
+    </select>
   </div>
+  <p id="resultsMeta" class="mb-6 text-sm text-slate-600 dark:text-slate-300"></p>
 
   <section id="postsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></section>
   <div class="flex justify-center mt-8 gap-2" id="pagination"></div>
