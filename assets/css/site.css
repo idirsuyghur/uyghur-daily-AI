@@ -21,6 +21,33 @@ h1 { font-size: 1.9rem !important; }
 h2 { font-size: 1.45rem !important; }
 p, li, a, span { font-size: 1.05rem; }
 
+.article-shell {
+  backdrop-filter: blur(6px);
+}
+
+.article-body h2,
+.article-body h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.4rem;
+  font-weight: 800;
+}
+
+.article-body p {
+  margin-top: 0.65rem;
+  margin-bottom: 0.65rem;
+  color: inherit;
+}
+
+.article-body ul {
+  list-style: disc;
+  padding-inline-start: 1.3rem;
+  margin-top: 0.5rem;
+}
+
+.article-body a {
+  text-decoration: underline;
+}
+
 /* Mobile header/menu tuning */
 @media (max-width: 640px) {
   header h1 { font-size: 1.55rem !important; }
