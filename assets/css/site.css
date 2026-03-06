@@ -4,6 +4,14 @@ html { font-size: 20px; }
   html { font-size: 17px; }
 }
 
+body {
+  background-image: radial-gradient(circle at top left, rgba(56,189,248,0.10), transparent 35%);
+}
+
+.dark body {
+  background-image: radial-gradient(circle at top left, rgba(56,189,248,0.08), transparent 35%);
+}
+
 html, body, h1, h2, h3, h4, h5, h6, p, li, a, span, div, article, section, input, select, button {
   font-family: 'Lateef', system-ui, sans-serif !important;
   line-height: 1.75;

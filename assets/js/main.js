@@ -67,11 +67,13 @@ function filtered() {
 }
 
 function card(post) {
-  return `<a href="post.html?slug=${post.slug}" class="bg-white dark:bg-slate-900 rounded-2xl shadow overflow-hidden hover:-translate-y-1 transition">
-    <img src="${post.featuredImage || 'assets/img/default-cover.svg'}" alt="${post.title}" class="w-full h-40 object-cover"/>
+  return `<a href="post.html?slug=${post.slug}" class="group bg-white/95 dark:bg-slate-900/95 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl overflow-hidden hover:-translate-y-1 transition duration-300">
+    <div class="overflow-hidden">
+      <img src="${post.featuredImage || 'assets/img/default-cover.svg'}" alt="${post.title}" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500"/>
+    </div>
     <div class="p-4">
-      <p class="text-xs text-slate-500">${post.date || ''} · ${post.category || ''}</p>
-      <h3 class="font-bold mt-2">${post.title || ''}</h3>
+      <p class="text-xs text-slate-500 flex items-center gap-2"><span class="px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800">${post.category || ''}</span><span>${post.date || ''}</span></p>
+      <h3 class="font-bold mt-2 leading-snug">${post.title || ''}</h3>
       <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">${post.description || ''}</p>
     </div>
   </a>`;
@@ -95,10 +97,10 @@ function render() {
     const b = document.createElement('button');
     b.textContent = i;
     b.className =
-      'px-3 py-1 rounded ' +
+      'px-3 py-1 rounded-lg transition border ' +
       (i === state.page
-        ? 'bg-slate-800 text-white dark:bg-slate-200 dark:text-slate-900'
-        : 'bg-slate-200 dark:bg-slate-700');
+        ? 'bg-slate-800 text-white border-slate-800 dark:bg-slate-100 dark:text-slate-900 dark:border-slate-100'
+        : 'bg-slate-100 border-slate-200 hover:bg-slate-200 dark:bg-slate-800 dark:border-slate-700 dark:hover:bg-slate-700');
     b.onclick = () => {
       state.page = i;
       render();
