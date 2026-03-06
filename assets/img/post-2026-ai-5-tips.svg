@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="2026 Uyghur AI 5 tips cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <circle cx="1040" cy="120" r="120" fill="#38bdf8" opacity="0.18"/>
+  <circle cx="150" cy="520" r="180" fill="#22c55e" opacity="0.15"/>
+
+  <rect x="90" y="110" rx="28" ry="28" width="1020" height="410" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)"/>
+
+  <rect x="130" y="150" rx="14" ry="14" width="210" height="54" fill="url(#card)"/>
+  <text x="235" y="186" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">2026</text>
+
+  <text x="130" y="280" font-family="Arial, sans-serif" font-size="58" font-weight="700" fill="#ffffff">Uyghur AI</text>
+  <text x="130" y="350" font-family="Arial, sans-serif" font-size="50" font-weight="700" fill="#e2e8f0">5 Practical Tips</text>
+
+  <text x="130" y="420" font-family="Arial, sans-serif" font-size="30" fill="#cbd5e1">Smart workflow • Better writing • Faster publishing</text>
+
+  <g transform="translate(880,410)">
+    <rect x="0" y="0" width="170" height="80" rx="16" fill="rgba(255,255,255,0.1)"/>
+    <text x="85" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#f8fafc">+5</text>
+  </g>
+</svg>
