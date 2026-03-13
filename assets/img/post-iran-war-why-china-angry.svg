@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">ئىران ئۇرۇشى ۋە خىتاينىڭ ئاچچىقى</title>
+  <desc id="desc">قىزىل ۋە قارا رەڭلىك سىياسىي بىلوگ cover: يېرىلغان خەرىتە، نېفىت تامچىسى، ۋە ئاگاھلاندۇرۇش دولقۇنى</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#7f1d1d"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <g opacity="0.14" stroke="#fca5a5" stroke-width="2">
+    <path d="M0 160 H1600"/><path d="M0 300 H1600"/><path d="M0 440 H1600"/><path d="M0 580 H1600"/><path d="M0 720 H1600"/>
+    <path d="M220 0 V900"/><path d="M500 0 V900"/><path d="M780 0 V900"/><path d="M1060 0 V900"/><path d="M1340 0 V900"/>
+  </g>
+  <g filter="url(#shadow)">
+    <path d="M320 510 C410 340, 610 300, 740 370 C820 260, 1010 250, 1140 340 C1240 410, 1270 560, 1200 650 C1120 760, 930 800, 790 735 C680 790, 505 775, 400 690 C310 617, 277 592, 320 510Z" fill="#111827" opacity="0.82" stroke="#f87171" stroke-width="4"/>
+    <path d="M758 280 L790 420 L742 505 L818 610 L762 770" fill="none" stroke="#fde68a" stroke-width="10" stroke-linecap="round" stroke-dasharray="18 20"/>
+    <circle cx="790" cy="426" r="16" fill="#fde68a"/>
+  </g>
+  <g transform="translate(120,120)">
+    <path d="M150 0 C235 115 232 208 150 318 C68 208 65 115 150 0Z" fill="#0b0f19" stroke="#f59e0b" stroke-width="8"/>
+    <path d="M150 45 C206 129 205 193 150 268 C95 193 94 129 150 45Z" fill="#f59e0b" opacity="0.28"/>
+  </g>
+  <g transform="translate(1120,125)">
+    <circle cx="120" cy="120" r="108" fill="#111827" stroke="#fca5a5" stroke-width="6"/>
+    <path d="M75 120 C108 72 132 55 168 42" stroke="#ef4444" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <path d="M68 178 C110 146 153 145 197 174" stroke="#ef4444" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <path d="M52 222 C113 192 170 192 230 224" stroke="#ef4444" stroke-width="12" fill="none" stroke-linecap="round"/>
+  </g>
+  <g font-family="Noto Naskh Arabic, Amiri, serif" text-anchor="end" fill="#fff7ed">
+    <text x="1450" y="665" font-size="72" font-weight="700">ئىران ئۇرۇشى</text>
+    <text x="1450" y="750" font-size="72" font-weight="700">نېمە ئۈچۈن خىتاينى</text>
+    <text x="1450" y="835" font-size="86" font-weight="800" fill="#fde68a">بۇنچىلىك ئاچچىقلاندۇرىدۇ؟</text>
+  </g>
+</svg>
