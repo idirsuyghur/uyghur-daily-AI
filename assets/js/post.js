@@ -81,7 +81,7 @@ fetch('data/index.json')
       </div>
     `;
 
-    bindShareButtons(p.title || 'Post');
+    bindShareButtons(p.title || 'Post', new URL(staticUrl, window.location.href).href);
 
     const related = relatedPosts(meta, all, 4);
     const relatedEl = document.getElementById('relatedPosts');

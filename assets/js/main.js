@@ -66,8 +66,12 @@ function filtered() {
     .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 }
 
+function postUrl(post) {
+  return `p/${post.slug}/`;
+}
+
 function card(post) {
-  return `<a href="post.html?slug=${post.slug}" class="group bg-white/95 dark:bg-slate-900/95 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl overflow-hidden hover:-translate-y-1 transition duration-300">
+  return `<a href="${postUrl(post)}" class="group bg-white/95 dark:bg-slate-900/95 rounded-2xl border border-slate-200/80 dark:border-slate-800 shadow-sm hover:shadow-xl overflow-hidden hover:-translate-y-1 transition duration-300">
     <div class="overflow-hidden">
       <img src="${post.featuredImage || 'assets/img/default-cover.svg'}" alt="${post.title}" class="w-full h-44 object-cover group-hover:scale-105 transition duration-500"/>
     </div>

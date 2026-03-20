@@ -93,7 +93,12 @@ fs.writeFileSync(path.join(postsDir, file), JSON.stringify(post, null, 2) + '\n'
 index.posts.unshift({ ...post });
 fs.writeFileSync(indexPath, JSON.stringify(index, null, 2) + '\n');
 
-run('git', ['add', path.relative(repoRoot, indexPath), path.relative(repoRoot, path.join(postsDir, file))]);
+const staticGenerator = path.join(repoRoot, 'scripts', 'generate-static-post-pages.js');
+if (fs.existsSync(staticGenerator)) {
+  run('node', [path.relative(repoRoot, staticGenerator)]);
+}
+
+run('git', ['add', path.relative(repoRoot, indexPath), path.relative(repoRoot, path.join(postsDir, file)), 'p', path.relative(repoRoot, staticGenerator)]);
 run('git', ['commit', '-m', `post: ${title}`]);
 run('git', ['push', 'origin', 'HEAD']);
 
