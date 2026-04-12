@@ -98,7 +98,16 @@ if (fs.existsSync(staticGenerator)) {
   run('node', [path.relative(repoRoot, staticGenerator)]);
 }
 
-run('git', ['add', path.relative(repoRoot, indexPath), path.relative(repoRoot, path.join(postsDir, file)), 'p', path.relative(repoRoot, staticGenerator)]);
+const gitAddArgs = [
+  'add',
+  path.relative(repoRoot, indexPath),
+  path.relative(repoRoot, path.join(postsDir, file)),
+  'p'
+];
+if (fs.existsSync(staticGenerator)) {
+  gitAddArgs.push(path.relative(repoRoot, staticGenerator));
+}
+run('git', gitAddArgs);
 run('git', ['commit', '-m', `post: ${title}`]);
 run('git', ['push', 'origin', 'HEAD']);
 
