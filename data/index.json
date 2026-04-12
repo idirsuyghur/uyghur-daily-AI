@@ -5,6 +5,21 @@
   },
   "posts": [
     {
+      "title": "test post do not keep",
+      "slug": "test-post-do-not-keep",
+      "date": "2026-04-12",
+      "category": "تېخنىكا",
+      "tags": [
+        "تېخنىكا",
+        "ئۇيغۇرچە",
+        "AI"
+      ],
+      "description": "تېخنىكا ھەققىدە يېڭى ماقالە.",
+      "featuredImage": "assets/img/default-cover.svg",
+      "contentHtml": "<p>test</p>",
+      "file": "post-test-post-do-not-keep.json"
+    },
+    {
       "title": "Google Gemma نېمە؟ ئاددىي چۈشەندۈرۈش",
       "slug": "google-gemma",
       "date": "2026-04-12",
