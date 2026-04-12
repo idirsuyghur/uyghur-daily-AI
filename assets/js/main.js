@@ -6,12 +6,15 @@ qs('#themeToggle')?.addEventListener('click', () => {
   document.documentElement.classList.toggle('dark');
 });
 
-fetch('data/index.json')
+fetch(`data/index.json?v=${Date.now()}`, { cache: 'no-store' })
   .then((r) => r.json())
   .then((data) => {
     state.posts = Array.isArray(data.posts) ? data.posts : [];
     initFilters();
     render();
+  })
+  .catch(() => {
+    qs('#resultsMeta').textContent = 'ماقالىلەرنى يۈكلەشتە مەسىلە كۆرۈلدى.';
   });
 
 function initFilters() {
