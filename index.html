@@ -29,30 +29,39 @@
     </a>
     <div class="flex items-center gap-2">
       <a href="about.html" class="px-3 py-2 rounded-xl bg-slate-200/80 hover:bg-slate-300 transition dark:bg-slate-700/80 dark:hover:bg-slate-600">ھەققىمىزدە</a>
-      <button id="themeToggle" class="px-3 py-2 rounded-xl bg-slate-200/80 hover:bg-slate-300 transition dark:bg-slate-700/80 dark:hover:bg-slate-600">🌙/☀️</button>
+      <button id="themeToggle" aria-label="رەڭ ھالىتىنى ئالماشتۇرۇش" title="رەڭ ھالىتىنى ئالماشتۇرۇش" class="px-3 py-2 rounded-xl bg-slate-200/80 hover:bg-slate-300 transition dark:bg-slate-700/80 dark:hover:bg-slate-600">🌙/☀️</button>
     </div>
   </div>
 </header>
 
 <main class="max-w-6xl mx-auto px-4 py-8">
-  <section class="relative overflow-hidden rounded-3xl mb-7 p-6 md:p-8 bg-gradient-to-br from-slate-900 via-slate-800 to-sky-900 text-white shadow-xl">
+  <section class="relative overflow-hidden rounded-3xl mb-6 p-5 md:p-7 bg-gradient-to-br from-slate-900 via-slate-800 to-sky-900 text-white shadow-xl">
     <div class="absolute inset-0 opacity-20" style="background:radial-gradient(circle at 80% 20%,#38bdf8 0,#0f172a 50%,#020617 100%)"></div>
     <div class="relative z-10">
       <p class="inline-flex items-center gap-2 text-xs md:text-sm bg-white/15 border border-white/20 rounded-full px-3 py-1">⚡ ئۇيغۇرچە بىلىم · كۈندىلىك يېڭىلىنىش</p>
-      <h2 class="text-3xl md:text-4xl font-extrabold mt-4 leading-tight">زامانىۋى ئۇيغۇرچە تېخنىكا ۋە جۇغراپىيە-سىياسەت بىلوگى</h2>
-      <p class="mt-3 text-slate-200 max-w-3xl">تېخنىكا، AI ۋە دۇنيا سىياسىتىنى قىسقا، ئېنىق ۋە سۈپەتلىك ماقالىلەر بىلەن تەقدىم قىلىمىز.</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold mt-3 leading-tight">زامانىۋى ئۇيغۇرچە تېخنىكا ۋە جۇغراپىيە-سىياسەت بىلوگى</h2>
+      <p class="mt-2 text-slate-200 max-w-3xl">تېخنىكا، AI ۋە دۇنيا سىياسىتىنى قىسقا، ئېنىق ۋە سۈپەتلىك ماقالىلەر بىلەن تەقدىم قىلىمىز.</p>
     </div>
   </section>
 
-  <div class="grid md:grid-cols-4 gap-4 mb-3">
-    <input id="searchInput" class="md:col-span-2 w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3" placeholder="ماقالە ئىزدەش..."/>
-    <select id="categoryFilter" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3">
-      <option value="">ھەممە كاتېگورىيە</option>
-    </select>
-    <select id="tagFilter" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3">
-      <option value="">ھەممە بەلگە (tag)</option>
-    </select>
+  <div class="grid md:grid-cols-4 gap-4 mb-3" aria-label="ماقالە سۈزگۈچلىرى">
+    <label class="md:col-span-2 block">
+      <span class="sr-only">ماقالە ئىزدەش</span>
+      <input id="searchInput" aria-label="ماقالە ئىزدەش" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3" placeholder="ماقالە ئىزدەش..."/>
+    </label>
+    <label class="block">
+      <span class="sr-only">كاتېگورىيە تاللاش</span>
+      <select id="categoryFilter" aria-label="كاتېگورىيە تاللاش" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3">
+        <option value="">ھەممە كاتېگورىيە</option>
+      </select>
+    </label>
+    <label class="block">
+      <span class="sr-only">بەلگە ئىزدەش</span>
+      <input id="tagSearchInput" aria-label="بەلگە ئىزدەش" list="tagOptions" class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3" placeholder="بەلگە ئىزدەش..."/>
+      <datalist id="tagOptions"></datalist>
+    </label>
   </div>
+  <div id="popularTags" class="mb-4 flex flex-wrap gap-2" aria-label="كۆپ ئىشلىتىلگەن بەلگىلەر"></div>
   <p id="resultsMeta" class="mb-6 text-sm text-slate-600 dark:text-slate-300"></p>
 
   <section id="postsGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></section>

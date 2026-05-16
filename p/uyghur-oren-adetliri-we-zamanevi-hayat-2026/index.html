@@ -23,24 +23,39 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
   <style>
-    body{font-family:"Lateef",system-ui,sans-serif;margin:0;background:#020617;color:#e5e7eb;line-height:1.8}
-    .wrap{max-width:900px;margin:0 auto;padding:24px}
-    .card{background:#0f172a;border:1px solid rgba(255,255,255,.08);border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+    body{font-family:"Lateef",system-ui,sans-serif;margin:0;background:#f8fafc;color:#1e293b;line-height:1.8;background-image:radial-gradient(circle at top left,rgba(56,189,248,.10),transparent 35%)}
+    html.dark body{background:#020617;color:#e5e7eb;background-image:radial-gradient(circle at top left,rgba(56,189,248,.08),transparent 35%)}
+    .wrap{max-width:900px;margin:0 auto;padding:22px}
+    .card{background:rgba(255,255,255,.96);border:1px solid rgba(203,213,225,.85);border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(15,23,42,.12)}
+    html.dark .card{background:#0f172a;border-color:rgba(255,255,255,.08);box-shadow:0 20px 60px rgba(0,0,0,.35)}
     .cover{width:100%;max-height:460px;object-fit:cover;display:block}
     .content{padding:24px 24px 32px}
-    .meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;color:#cbd5e1;font-size:20px}
-    .pill,.tag{display:inline-block;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 12px;border-radius:999px}
-    h1{font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.2;margin:0 0 10px}
-    .desc{color:#cbd5e1;font-size:1.2rem;margin:0 0 20px}
-    .article-body{font-size:1.35rem;color:#e2e8f0}
-    .article-body h2,.article-body h3{color:#fff}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;color:#475569;font-size:20px}
+    html.dark .meta{color:#cbd5e1}
+    .pill,.tag{display:inline-block;background:#f1f5f9;border:1px solid #e2e8f0;padding:4px 12px;border-radius:999px}
+    html.dark .pill,html.dark .tag{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.08)}
+    h1{font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.2;margin:0 0 10px}
+    .desc{color:#475569;font-size:1.2rem;margin:0 0 20px}
+    html.dark .desc{color:#cbd5e1}
+    .article-body{font-size:1.35rem;color:#334155}
+    html.dark .article-body{color:#e2e8f0}
+    .article-body h2,.article-body h3{color:#0f172a}
+    html.dark .article-body h2,html.dark .article-body h3{color:#fff}
     .article-body img{max-width:100%;border-radius:16px}
     .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-    .topbar,.back{color:#93c5fd;text-decoration:none}
+    .topbar,.back{color:#2563eb;text-decoration:none}
+    html.dark .topbar,html.dark .back{color:#93c5fd}
     .topbar{display:inline-block;margin-bottom:16px;font-size:1.1rem}
-    .share{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-block;padding:10px 14px;border-radius:14px;background:#1e293b;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.08)}
+    .share{margin-top:24px;padding-top:18px;border-top:1px solid #e2e8f0;display:flex;gap:12px;flex-wrap:wrap}
+    html.dark .share{border-top-color:rgba(255,255,255,.08)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:14px;background:#e2e8f0;color:#0f172a;text-decoration:none;border:1px solid #cbd5e1}
+    html.dark .btn{background:#1e293b;color:#fff;border-color:rgba(255,255,255,.08)}
   </style>
 </head>
 <body>
@@ -55,7 +70,7 @@
         </div>
         <h1>ئۇيغۇر ئۆرپ-ئادەتلىرى ۋە زامانىۋى ھايات: ئىككىسىنى قانداق تەڭپۇڭلايمىز؟</h1>
         <p class="desc">ئۇيغۇر ئۆرپ-ئادەتلىرىنى زامانىۋى تۇرمۇش بىلەن ماسلاشتۇرۇپ داۋاملاشتۇرۇشنىڭ ئەمەلىي يوللىرى.</p>
-        <div class="article-body"><h1>ئۇيغۇر ئۆرپ-ئادەتلىرى ۋە زامانىۋى ھايات: ئىككىسىنى قانداق تەڭپۇڭلايمىز؟</h1><p>كۆپ كىشى زامانىۋىلىق بىلەن ئۆرپ-ئادەت بىر-بىرىگە زىت دەپ ئويلايدۇ. ئەمەلىيەتتە توغرا ئۇسۇل بىلەن ئىككىسىنى بىرلىكتە داۋاملاشتۇرغىلى بولىدۇ.</p><h2>1) ئۆرپ-ئادەتنىڭ قىممىتى</h2><p>ئۆرپ-ئادەت جەمئىيەتنىڭ ئىچكى باغلىنىشىنى كۈچەيتىدۇ، ئائىلە قىممىتىنى ساقلايدۇ.</p><h2>2) زامانىۋى قورال بىلەن داۋاملاشتۇرۇش</h2><p>مەدەنىي پائالىيەتلەرنى توردا تەشكىللەش، ياشلارغا قىسقا ۋە قىزىقارلىق فورماتتا يەتكۈزۈش ئۈنۈملۈك.</p><h2>3) ئائىلە باشلىنىش نۇقتىسى</h2><p>ھەر ھەپتە بىر مەدەنىي تېما بويىچە ئائىلە سۆھبىتى قىلىش ئاددىي، ئەمما تەسىرى چوڭ.</p><h2>خۇلاسە</h2><p>مەدەنىيەتنى ساقلاش ئۈچۈن ئۆتكەننىلا ئەسلەش يېتەرلىك ئەمەس؛ بۈگۈنكى تىلدا قايتا ياشىتىش كېرەك.</p></div>
+        <div class="article-body"><p>كۆپ كىشى زامانىۋىلىق بىلەن ئۆرپ-ئادەت بىر-بىرىگە زىت دەپ ئويلايدۇ. ئەمەلىيەتتە توغرا ئۇسۇل بىلەن ئىككىسىنى بىرلىكتە داۋاملاشتۇرغىلى بولىدۇ.</p><h2>1) ئۆرپ-ئادەتنىڭ قىممىتى</h2><p>ئۆرپ-ئادەت جەمئىيەتنىڭ ئىچكى باغلىنىشىنى كۈچەيتىدۇ، ئائىلە قىممىتىنى ساقلايدۇ.</p><h2>2) زامانىۋى قورال بىلەن داۋاملاشتۇرۇش</h2><p>مەدەنىي پائالىيەتلەرنى توردا تەشكىللەش، ياشلارغا قىسقا ۋە قىزىقارلىق فورماتتا يەتكۈزۈش ئۈنۈملۈك.</p><h2>3) ئائىلە باشلىنىش نۇقتىسى</h2><p>ھەر ھەپتە بىر مەدەنىي تېما بويىچە ئائىلە سۆھبىتى قىلىش ئاددىي، ئەمما تەسىرى چوڭ.</p><h2>خۇلاسە</h2><p>مەدەنىيەتنى ساقلاش ئۈچۈن ئۆتكەننىلا ئەسلەش يېتەرلىك ئەمەس؛ بۈگۈنكى تىلدا قايتا ياشىتىش كېرەك.</p></div>
         <div class="tags"><span class="tag">#ئۆرپ-ئادەت</span><span class="tag">#ئۇيغۇر مەدەنىيىتى</span><span class="tag">#زامانىۋى ھايات</span><span class="tag">#ئائىلە</span><span class="tag">#جەمئىيەت</span></div>
         <div class="share">
           <a class="btn" href="https://t.me/share/url?url=https%3A%2F%2Fidirsuyghur.github.io%2Fuyghur-daily-AI%2Fp%2Fuyghur-oren-adetliri-we-zamanevi-hayat-2026%2F&text=%D8%A6%DB%87%D9%8A%D8%BA%DB%87%D8%B1%20%D8%A6%DB%86%D8%B1%D9%BE-%D8%A6%D8%A7%D8%AF%DB%95%D8%AA%D9%84%D9%89%D8%B1%D9%89%20%DB%8B%DB%95%20%D8%B2%D8%A7%D9%85%D8%A7%D9%86%D9%89%DB%8B%D9%89%20%DA%BE%D8%A7%D9%8A%D8%A7%D8%AA%3A%20%D8%A6%D9%89%D9%83%D9%83%D9%89%D8%B3%D9%89%D9%86%D9%89%20%D9%82%D8%A7%D9%86%D8%AF%D8%A7%D9%82%20%D8%AA%DB%95%DA%AD%D9%BE%DB%87%DA%AD%D9%84%D8%A7%D9%8A%D9%85%D9%89%D8%B2%D8%9F" target="_blank" rel="noopener noreferrer">Telegram</a>

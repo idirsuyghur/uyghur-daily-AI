@@ -23,24 +23,39 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
   <style>
-    body{font-family:"Lateef",system-ui,sans-serif;margin:0;background:#020617;color:#e5e7eb;line-height:1.8}
-    .wrap{max-width:900px;margin:0 auto;padding:24px}
-    .card{background:#0f172a;border:1px solid rgba(255,255,255,.08);border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+    body{font-family:"Lateef",system-ui,sans-serif;margin:0;background:#f8fafc;color:#1e293b;line-height:1.8;background-image:radial-gradient(circle at top left,rgba(56,189,248,.10),transparent 35%)}
+    html.dark body{background:#020617;color:#e5e7eb;background-image:radial-gradient(circle at top left,rgba(56,189,248,.08),transparent 35%)}
+    .wrap{max-width:900px;margin:0 auto;padding:22px}
+    .card{background:rgba(255,255,255,.96);border:1px solid rgba(203,213,225,.85);border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(15,23,42,.12)}
+    html.dark .card{background:#0f172a;border-color:rgba(255,255,255,.08);box-shadow:0 20px 60px rgba(0,0,0,.35)}
     .cover{width:100%;max-height:460px;object-fit:cover;display:block}
     .content{padding:24px 24px 32px}
-    .meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;color:#cbd5e1;font-size:20px}
-    .pill,.tag{display:inline-block;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);padding:4px 12px;border-radius:999px}
-    h1{font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.2;margin:0 0 10px}
-    .desc{color:#cbd5e1;font-size:1.2rem;margin:0 0 20px}
-    .article-body{font-size:1.35rem;color:#e2e8f0}
-    .article-body h2,.article-body h3{color:#fff}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;color:#475569;font-size:20px}
+    html.dark .meta{color:#cbd5e1}
+    .pill,.tag{display:inline-block;background:#f1f5f9;border:1px solid #e2e8f0;padding:4px 12px;border-radius:999px}
+    html.dark .pill,html.dark .tag{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.08)}
+    h1{font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.2;margin:0 0 10px}
+    .desc{color:#475569;font-size:1.2rem;margin:0 0 20px}
+    html.dark .desc{color:#cbd5e1}
+    .article-body{font-size:1.35rem;color:#334155}
+    html.dark .article-body{color:#e2e8f0}
+    .article-body h2,.article-body h3{color:#0f172a}
+    html.dark .article-body h2,html.dark .article-body h3{color:#fff}
     .article-body img{max-width:100%;border-radius:16px}
     .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-    .topbar,.back{color:#93c5fd;text-decoration:none}
+    .topbar,.back{color:#2563eb;text-decoration:none}
+    html.dark .topbar,html.dark .back{color:#93c5fd}
     .topbar{display:inline-block;margin-bottom:16px;font-size:1.1rem}
-    .share{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.08);display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-block;padding:10px 14px;border-radius:14px;background:#1e293b;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.08)}
+    .share{margin-top:24px;padding-top:18px;border-top:1px solid #e2e8f0;display:flex;gap:12px;flex-wrap:wrap}
+    html.dark .share{border-top-color:rgba(255,255,255,.08)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:14px;background:#e2e8f0;color:#0f172a;text-decoration:none;border:1px solid #cbd5e1}
+    html.dark .btn{background:#1e293b;color:#fff;border-color:rgba(255,255,255,.08)}
   </style>
 </head>
 <body>
@@ -55,7 +70,7 @@
         </div>
         <h1>شەرقىي تۈركىستان تېمىسىنى ياشلار قانداق ئوقۇشى كېرەك؟ ئەمەلىي ئۆگىنىش پىلانى</h1>
         <p class="desc">ياشلار ئۈچۈن شەرقىي تۈركىستان تېمىسىنى سەۋرچان، پاكىتقا تايىنىدىغان ۋە سىستېمىلىق ئۆگىنىشقا ياردەم بېرىدىغان ئەمەلىي پىلان.</p>
-        <div class="article-body"><h1>شەرقىي تۈركىستان تېمىسىنى ياشلار قانداق ئوقۇشى كېرەك؟ ئەمەلىي ئۆگىنىش پىلانى</h1><p>كۆپ ياشلاردا «نېمىدىن باشلايمەن؟» دېگەن سوئال بار. تۆۋەندىكى ئاددىي پىلان شەرقىي تۈركىستان تېمىسىنى تەرتىپلىك ئۆگىنىشكە ياردەم بېرىدۇ.</p><h2>1-باسقۇچ: ئاساس قۇرۇش (1–2 ھەپتە)</h2><ul><li>رايوننىڭ جۇغراپىيە ۋە تارىخىي ۋاقىت سىزىقىنى ئۆگىنىش</li><li>ئۇيغۇر تىلى، مەدەنىيىتى ۋە كىملىكى توغرىسىدا قىسقا مەزمۇن ئوقۇش</li></ul><h2>2-باسقۇچ: مەنبە سەۋىيىسى (3–4 ھەپتە)</h2><ul><li>2–3 خىل مەنبەدىن ئوخشاش تېمىنى سېلىشتۇرۇش</li><li>«پاكىت / باھا / تەشۋىقات» دەپ ئايرىپ خاتىرە قىلىش</li></ul><h2>3-باسقۇچ: ئىپادىلەش ۋە مۇنازىرە</h2><ul><li>ھەپتىدە بىر قېتىم 300–500 سۆزلۈك خۇلاسە يېزىش</li><li>دوستلار بىلەن سەۋرچان، ھۆرمەتلىك مۇنازىرە ئادىتى قۇرۇش</li></ul><h2>4-باسقۇچ: رەقەملىك مەسئۇلىيەت</h2><p>ئىجتىمائىي تاراتقۇدا ھەر قانداق مەزمۇننى ھەمبەھىرلەشتىن بۇرۇن مەنبەنى 2 قېتىم تەكشۈرۈش. خاتا ئۇچۇرنى تاراتماسلىق — ئەڭ چوڭ مەسئۇلىيەت.</p><h2>خۇلاسە</h2><p>ياشلارنىڭ كۈچى — ئاڭلىق ئۆگىنىش ۋە توغرا ئىپادىلەش. شەرقىي تۈركىستان تېمىسىنى ھېسسىيات بىلەنلا ئەمەس، بىلىم، پاكىت ۋە سەۋر بىلەن ئۆگىنىش كەلگۈسىگە ئەڭ پايدىلىق يول.</p></div>
+        <div class="article-body"><p>كۆپ ياشلاردا «نېمىدىن باشلايمەن؟» دېگەن سوئال بار. تۆۋەندىكى ئاددىي پىلان شەرقىي تۈركىستان تېمىسىنى تەرتىپلىك ئۆگىنىشكە ياردەم بېرىدۇ.</p><h2>1-باسقۇچ: ئاساس قۇرۇش (1–2 ھەپتە)</h2><ul><li>رايوننىڭ جۇغراپىيە ۋە تارىخىي ۋاقىت سىزىقىنى ئۆگىنىش</li><li>ئۇيغۇر تىلى، مەدەنىيىتى ۋە كىملىكى توغرىسىدا قىسقا مەزمۇن ئوقۇش</li></ul><h2>2-باسقۇچ: مەنبە سەۋىيىسى (3–4 ھەپتە)</h2><ul><li>2–3 خىل مەنبەدىن ئوخشاش تېمىنى سېلىشتۇرۇش</li><li>«پاكىت / باھا / تەشۋىقات» دەپ ئايرىپ خاتىرە قىلىش</li></ul><h2>3-باسقۇچ: ئىپادىلەش ۋە مۇنازىرە</h2><ul><li>ھەپتىدە بىر قېتىم 300–500 سۆزلۈك خۇلاسە يېزىش</li><li>دوستلار بىلەن سەۋرچان، ھۆرمەتلىك مۇنازىرە ئادىتى قۇرۇش</li></ul><h2>4-باسقۇچ: رەقەملىك مەسئۇلىيەت</h2><p>ئىجتىمائىي تاراتقۇدا ھەر قانداق مەزمۇننى ھەمبەھىرلەشتىن بۇرۇن مەنبەنى 2 قېتىم تەكشۈرۈش. خاتا ئۇچۇرنى تاراتماسلىق — ئەڭ چوڭ مەسئۇلىيەت.</p><h2>خۇلاسە</h2><p>ياشلارنىڭ كۈچى — ئاڭلىق ئۆگىنىش ۋە توغرا ئىپادىلەش. شەرقىي تۈركىستان تېمىسىنى ھېسسىيات بىلەنلا ئەمەس، بىلىم، پاكىت ۋە سەۋر بىلەن ئۆگىنىش كەلگۈسىگە ئەڭ پايدىلىق يول.</p></div>
         <div class="tags"><span class="tag">#شەرقىي تۈركىستان</span><span class="tag">#ياشلار</span><span class="tag">#ئۆگىنىش پىلانى</span><span class="tag">#ئۇيغۇرچە</span><span class="tag">#تارىخ</span></div>
         <div class="share">
           <a class="btn" href="https://t.me/share/url?url=https%3A%2F%2Fidirsuyghur.github.io%2Fuyghur-daily-AI%2Fp%2Fsherqiy-turkistan-yashlar-ugunush-pilani-2026%2F&text=%D8%B4%DB%95%D8%B1%D9%82%D9%89%D9%8A%20%D8%AA%DB%88%D8%B1%D9%83%D9%89%D8%B3%D8%AA%D8%A7%D9%86%20%D8%AA%DB%90%D9%85%D9%89%D8%B3%D9%89%D9%86%D9%89%20%D9%8A%D8%A7%D8%B4%D9%84%D8%A7%D8%B1%20%D9%82%D8%A7%D9%86%D8%AF%D8%A7%D9%82%20%D8%A6%D9%88%D9%82%DB%87%D8%B4%D9%89%20%D9%83%DB%90%D8%B1%DB%95%D9%83%D8%9F%20%D8%A6%DB%95%D9%85%DB%95%D9%84%D9%89%D9%8A%20%D8%A6%DB%86%DA%AF%D9%89%D9%86%D9%89%D8%B4%20%D9%BE%D9%89%D9%84%D8%A7%D9%86%D9%89" target="_blank" rel="noopener noreferrer">Telegram</a>

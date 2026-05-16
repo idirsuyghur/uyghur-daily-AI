@@ -6,6 +6,13 @@ function estimateReadingTime(html = '') {
   return Math.max(1, Math.round(words / 200));
 }
 
+function removeDuplicateTitle(contentHtml = '', title = '') {
+  const escapeRegExp = (value) => String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return String(contentHtml)
+    .replace(new RegExp(`^\\s*<h1[^>]*>\\s*${escapeRegExp(title)}\\s*</h1>\\s*`, 'i'), '')
+    .trim();
+}
+
 function relatedPosts(current, all, limit = 4) {
   const currentTags = new Set(Array.isArray(current.tags) ? current.tags : []);
 
@@ -51,6 +58,7 @@ fetch('data/index.json')
 
     const p = await fetch(`data/posts/${meta.file}`).then((r) => r.json());
     const readingTime = estimateReadingTime(p.contentHtml || '');
+    const articleHtml = removeDuplicateTitle(p.contentHtml || '', p.title || '');
 
     document.title = `${p.title} | ئۇيغۇر AI بىلوگى`;
     document.getElementById('article').innerHTML = `
@@ -69,7 +77,7 @@ fetch('data/index.json')
         ${p.sourceUrl ? `<p><strong>مەنبە:</strong> <a class="underline" target="_blank" rel="noopener noreferrer" href="${p.sourceUrl}">Original link</a></p>` : ''}
       </div>
 
-      <div class="article-body">${p.contentHtml || ''}</div>
+      <div class="article-body">${articleHtml}</div>
 
       <div class="mt-7 text-sm flex flex-wrap gap-2">${(p.tags || []).map((t) => `<span class='px-2 py-1 rounded-lg bg-slate-200 dark:bg-slate-700'>#${t}</span>`).join('')}</div>
 
@@ -81,7 +89,7 @@ fetch('data/index.json')
       </div>
     `;
 
-    bindShareButtons(p.title || 'Post', new URL(staticUrl, window.location.href).href);
+    bindShareButtons(p.title || 'Post');
 
     const related = relatedPosts(meta, all, 4);
     const relatedEl = document.getElementById('relatedPosts');
