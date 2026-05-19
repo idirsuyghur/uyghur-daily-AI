@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="AI بىلەن كىچىك سودا باشلاش">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06131f"/>
+      <stop offset="52%" stop-color="#0f2f36"/>
+      <stop offset="100%" stop-color="#19324a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <path d="M0 500 C170 420 280 570 455 485 C620 405 710 440 820 360 C955 262 1070 282 1200 205 L1200 630 L0 630 Z" fill="#f8fafc" opacity=".08"/>
+  <rect x="82" y="86" width="1036" height="458" rx="30" fill="#ffffff" opacity=".075" stroke="#ffffff" stroke-opacity=".13"/>
+  <rect x="128" y="140" width="425" height="320" rx="22" fill="#07111f" stroke="#2dd4bf" stroke-opacity=".45"/>
+  <rect x="164" y="178" width="146" height="18" rx="9" fill="#14b8a6"/>
+  <rect x="164" y="221" width="320" height="24" rx="9" fill="#e2e8f0" opacity=".88"/>
+  <rect x="164" y="264" width="258" height="16" rx="8" fill="#94a3b8" opacity=".8"/>
+  <rect x="164" y="294" width="304" height="16" rx="8" fill="#64748b" opacity=".78"/>
+  <rect x="164" y="344" width="132" height="56" rx="16" fill="url(#accent)"/>
+  <path d="M338 370 h118" stroke="#f8fafc" stroke-width="12" stroke-linecap="round" opacity=".9"/>
+  <path d="M384 324 v92" stroke="#f8fafc" stroke-width="12" stroke-linecap="round" opacity=".34"/>
+  <circle cx="680" cy="245" r="64" fill="#14b8a6" opacity=".16"/>
+  <circle cx="680" cy="245" r="38" fill="#14b8a6" opacity=".88"/>
+  <path d="M680 178 v-34 M680 346 v-34 M613 245 h-34 M781 245 h-34 M633 198 l-24-24 M751 316 l-24-24 M727 198 l24-24 M609 316 l24-24" stroke="#67e8f9" stroke-width="9" stroke-linecap="round" opacity=".72"/>
+  <rect x="778" y="150" width="252" height="74" rx="18" fill="#020617" opacity=".62" stroke="#f59e0b" stroke-opacity=".5"/>
+  <rect x="778" y="254" width="252" height="74" rx="18" fill="#020617" opacity=".62" stroke="#14b8a6" stroke-opacity=".5"/>
+  <rect x="778" y="358" width="252" height="74" rx="18" fill="#020617" opacity=".62" stroke="#e2e8f0" stroke-opacity=".22"/>
+  <text x="904" y="197" font-size="25" font-family="Arial, sans-serif" text-anchor="middle" fill="#fde68a" font-weight="700">Idea</text>
+  <text x="904" y="301" font-size="25" font-family="Arial, sans-serif" text-anchor="middle" fill="#99f6e4" font-weight="700">Offer</text>
+  <text x="904" y="405" font-size="25" font-family="Arial, sans-serif" text-anchor="middle" fill="#e2e8f0" font-weight="700">Customer</text>
+  <text x="104" y="72" font-size="40" font-family="Arial, sans-serif" fill="#f8fafc" font-weight="700">Uyghur Daily AI</text>
+  <text x="600" y="515" font-size="44" font-family="Arial, sans-serif" text-anchor="middle" fill="#f8fafc" font-weight="700">AI + Small Business</text>
+</svg>
