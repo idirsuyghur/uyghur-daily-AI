@@ -104,6 +104,10 @@ const gitAddArgs = [
   path.relative(repoRoot, path.join(postsDir, file)),
   'p'
 ];
+const featuredImagePath = path.join(repoRoot, featuredImage);
+if (featuredImage && !/^https?:\/\//i.test(featuredImage) && fs.existsSync(featuredImagePath)) {
+  gitAddArgs.push(path.relative(repoRoot, featuredImagePath));
+}
 if (fs.existsSync(staticGenerator)) {
   gitAddArgs.push(path.relative(repoRoot, staticGenerator));
 }
