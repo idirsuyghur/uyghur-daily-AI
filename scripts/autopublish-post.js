@@ -23,6 +23,15 @@ function run(cmd, args) {
   if (r.status !== 0) fail(`Command failed: ${cmd} ${args.join(' ')}`);
 }
 
+function runAllowFail(cmd, args, warningMessage) {
+  const r = spawnSync(cmd, args, { cwd: repoRoot, stdio: 'inherit' });
+  if (r.status !== 0) {
+    console.warn(`⚠️ ${warningMessage || `Command failed (continuing): ${cmd} ${args.join(' ')}`}`);
+    return false;
+  }
+  return true;
+}
+
 function slugify(input) {
   const s = (input || '')
     .toLowerCase()
@@ -113,7 +122,7 @@ if (fs.existsSync(staticGenerator)) {
 }
 run('git', gitAddArgs);
 run('git', ['commit', '-m', `post: ${title}`]);
-run('git', ['push', 'origin', 'HEAD']);
+runAllowFail('git', ['push', 'origin', 'HEAD'], 'git push failed (continuing). If this environment has no network/DNS, push from a normal terminal.');
 
 console.log('✅ Published:', slug);
 console.log('📄 File:', file);
