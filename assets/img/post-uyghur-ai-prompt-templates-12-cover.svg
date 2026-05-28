@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="55%" stop-color="#0f2a3a"/>
+      <stop offset="100%" stop-color="#1f3a8a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <circle cx="210" cy="120" r="120" fill="#22c55e" opacity="0.18" filter="url(#soft)"/>
+  <circle cx="1040" cy="540" r="180" fill="#38bdf8" opacity="0.16" filter="url(#soft)"/>
+  <circle cx="980" cy="140" r="90" fill="#a78bfa" opacity="0.14" filter="url(#soft)"/>
+
+  <rect x="72" y="84" width="1056" height="462" rx="28" fill="#0b1220" opacity="0.35"/>
+  <rect x="72" y="84" width="1056" height="8" rx="4" fill="url(#accent)"/>
+
+  <text x="1128" y="160" text-anchor="end" fill="#e2e8f0" font-size="44" font-family="Lateef, 'Noto Naskh Arabic', serif">Uyghur Daily AI</text>
+  <text x="1128" y="208" text-anchor="end" fill="#94a3b8" font-size="30" font-family="Lateef, 'Noto Naskh Arabic', serif">سۈنئىي ئەقىل • تېخنىكا • ئۆگىنىش</text>
+
+  <text x="600" y="320" text-anchor="middle" fill="#f8fafc" font-size="76" font-family="Lateef, 'Noto Naskh Arabic', serif">ئۇيغۇرچە ئۈچۈن AI پرومپت قېلىپلىرى</text>
+  <text x="600" y="390" text-anchor="middle" fill="#cbd5e1" font-size="46" font-family="Lateef, 'Noto Naskh Arabic', serif">12 دانە «كۆچۈرۈپ–چاپلا» ئۈلگە</text>
+
+  <g>
+    <rect x="72" y="496" width="1056" height="50" rx="16" fill="#0b1220" opacity="0.35"/>
+    <text x="104" y="530" fill="#e2e8f0" font-size="30" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">prompt • template • workflow</text>
+    <text x="1128" y="530" text-anchor="end" fill="#e2e8f0" font-size="30" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace">2026-05-29</text>
+  </g>
+</svg>
