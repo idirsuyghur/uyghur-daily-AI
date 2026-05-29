@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ug" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI بىلەن Anki دا ئۇيغۇرچە سۆزلۈك كارتىلىرىنى تېز قۇرۇش (ئەمەلىي قوللانما) | ئۇيغۇر AI بىلوگى</title>
+  <meta name="description" content="AI ياردىمى بىلەن Anki كارتىلىرىنى TSV فورماتتا تېز قۇرۇش، تەكشۈرۈش ۋە import قىلىش قوللانمىسى." />
+  <link rel="canonical" href="https://idirsuyghur.github.io/uyghur-daily-AI/p/ai-anki-uyghur-flashcards/" />
+
+  <meta property="og:title" content="AI بىلەن Anki دا ئۇيغۇرچە سۆزلۈك كارتىلىرىنى تېز قۇرۇش (ئەمەلىي قوللانما)" />
+  <meta property="og:description" content="AI ياردىمى بىلەن Anki كارتىلىرىنى TSV فورماتتا تېز قۇرۇش، تەكشۈرۈش ۋە import قىلىش قوللانمىسى." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://idirsuyghur.github.io/uyghur-daily-AI/p/ai-anki-uyghur-flashcards/" />
+  <meta property="og:image" content="https://idirsuyghur.github.io/uyghur-daily-AI/assets/img/ai-anki-uyghur-flashcards-cover.svg" />
+  <meta property="og:site_name" content="ئۇيغۇر AI بىلوگى" />
+  <meta property="article:published_time" content="2026-05-30" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI بىلەن Anki دا ئۇيغۇرچە سۆزلۈك كارتىلىرىنى تېز قۇرۇش (ئەمەلىي قوللانما)" />
+  <meta name="twitter:description" content="AI ياردىمى بىلەن Anki كارتىلىرىنى TSV فورماتتا تېز قۇرۇش، تەكشۈرۈش ۋە import قىلىش قوللانمىسى." />
+  <meta name="twitter:image" content="https://idirsuyghur.github.io/uyghur-daily-AI/assets/img/ai-anki-uyghur-flashcards-cover.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
+  <style>
+    body{font-family:"Lateef",system-ui,sans-serif;margin:0;background:#f8fafc;color:#1e293b;line-height:1.8;background-image:radial-gradient(circle at top left,rgba(56,189,248,.10),transparent 35%)}
+    html.dark body{background:#020617;color:#e5e7eb;background-image:radial-gradient(circle at top left,rgba(56,189,248,.08),transparent 35%)}
+    .wrap{max-width:900px;margin:0 auto;padding:22px}
+    .card{background:rgba(255,255,255,.96);border:1px solid rgba(203,213,225,.85);border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(15,23,42,.12)}
+    html.dark .card{background:#0f172a;border-color:rgba(255,255,255,.08);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+    .cover{width:100%;max-height:460px;object-fit:cover;display:block}
+    .content{padding:24px 24px 32px}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;color:#475569;font-size:20px}
+    html.dark .meta{color:#cbd5e1}
+    .pill,.tag{display:inline-block;background:#f1f5f9;border:1px solid #e2e8f0;padding:4px 12px;border-radius:999px}
+    html.dark .pill,html.dark .tag{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.08)}
+    h1{font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.2;margin:0 0 10px}
+    .desc{color:#475569;font-size:1.2rem;margin:0 0 20px}
+    html.dark .desc{color:#cbd5e1}
+    .article-body{font-size:1.35rem;color:#334155}
+    html.dark .article-body{color:#e2e8f0}
+    .article-body h2,.article-body h3{color:#0f172a}
+    html.dark .article-body h2,html.dark .article-body h3{color:#fff}
+    .article-body img{max-width:100%;border-radius:16px}
+    .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .topbar,.back{color:#2563eb;text-decoration:none}
+    html.dark .topbar,html.dark .back{color:#93c5fd}
+    .topbar{display:inline-block;margin-bottom:16px;font-size:1.1rem}
+    .share{margin-top:24px;padding-top:18px;border-top:1px solid #e2e8f0;display:flex;gap:12px;flex-wrap:wrap}
+    html.dark .share{border-top-color:rgba(255,255,255,.08)}
+    .btn{display:inline-block;padding:10px 14px;border-radius:14px;background:#e2e8f0;color:#0f172a;text-decoration:none;border:1px solid #cbd5e1}
+    html.dark .btn{background:#1e293b;color:#fff;border-color:rgba(255,255,255,.08)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="topbar" href="https://idirsuyghur.github.io/uyghur-daily-AI/index.html">← باش بەتكە قايتىش</a>
+    <article class="card">
+      <img class="cover" src="https://idirsuyghur.github.io/uyghur-daily-AI/assets/img/ai-anki-uyghur-flashcards-cover.svg" alt="AI بىلەن Anki دا ئۇيغۇرچە سۆزلۈك كارتىلىرىنى تېز قۇرۇش (ئەمەلىي قوللانما)" />
+      <div class="content">
+        <div class="meta">
+          <span class="pill">تېخنىكا</span>
+          <span class="pill">2026-05-30</span>
+        </div>
+        <h1>AI بىلەن Anki دا ئۇيغۇرچە سۆزلۈك كارتىلىرىنى تېز قۇرۇش (ئەمەلىي قوللانما)</h1>
+        <p class="desc">AI ياردىمى بىلەن Anki كارتىلىرىنى TSV فورماتتا تېز قۇرۇش، تەكشۈرۈش ۋە import قىلىش قوللانمىسى.</p>
+        <div class="article-body"><p>سۆزلۈك يادلاشتا <strong>تېز-تېز قايتىلاندۇرۇپ كۆرۈش</strong> (spaced repetition) ئەڭ ئۈنۈملۈك ئۇسۇللاردىن. <strong>Anki</strong> دەك ئەپ-قوراللار بۇنى ئاپتوماتلاشتۇرۇپ بېرىدۇ. ئەمما كارتى ياساش ۋاقىت يەيدۇ. بۇ يازمىدا <strong>AI (ChatGPT قاتارلىق)</strong> نى ئىشلىتىپ <em>ئۇيغۇرچە سۆزلۈك/جۈملە</em> كارتىلىرىنى تېز قۇرۇش، سۈپەتنى تەكشۈرۈش ۋە Anki غا بىۋاسىتە كىرگۈزۈش ئۇسۇلىنى قەدەم-بەقەدەم كۆرسىتىمەن.</p>
+
+<h2>1) نىشانىڭىزنى ئايدىڭلاشتۇرۇڭ: «نېمە ئۈچۈن كارتى؟»</h2>
+<ul>
+  <li><strong>سۆزلۈك يادلاش</strong>: بىر سۆز + مەنىسى + ئۈلگە جۈملە</li>
+  <li><strong>سۆزلەشنى كۈچەيتىش</strong>: «سؤال → جاۋاب» شەكلى</li>
+  <li><strong>يازما/ئوقۇش</strong>: جۈملە-تەھلىل، سۆز تۈرى (ismin/pe'il) قاتارلىق بەلگىلەر</li>
+</ul>
+<p>AI غا بەرگەن تەلەپلىرىڭىز نىشانغا ماس بولسا، چىقىدىغان نەتىجە <em>ئالدىنلا سۈپەتلىك</em> بولىدۇ.</p>
+
+<h2>2) AI غا «تۈزۈم» بەرگەن پرومپت (ئەڭ مۇھىم قەدەم)</h2>
+<p>AI نىڭ «قايسى فورماتتا» چىقىرىشىنى ئالدىن بەلگىلەڭ. Anki ئۈچۈن ئەڭ قولايلىق فورمات: <strong>TSV</strong> (Tab-separated) ياكى <strong>CSV</strong>. تۆۋەندىكى پرومپتنى كۆچۈرۈپ ئىشلىتىڭ:</p>
+
+<pre><code>سىز ئۇيغۇرچە (Arab/Yëziq) ۋە English بىلدىغان سۆزلۈك-تۈزگۈچى.
+مەن ئۈچۈن Anki كارتىسى ياساپ بېرىڭ.
+قائىدە:
+- چىقىرىش فورماتى: TSV (3 ستون) — Front\tBack\tExample
+- Front: ئۇيغۇرچە سۆز (ياكى ئىبارە)
+- Back: English مەنىسى + IPA (ئەگەر ئىشەنچلىك بولسا) + سۆز تۈرى (noun/verb/adj)
+- Example: ئۇيغۇرچە قىسقا ئۈلگە جۈملە + English تەرجىمە
+- خەتالىق بولۇش ئېھتىمالى بار مەزمۇنغا «(verify)» بەلگىسى قويۇڭ
+- ھەر قۇر بىر كارتى
+
+تېما: سەپەر (travel)
+سۆزلەر سانى: 25</code></pre>
+
+<p><strong>نۇقتا</strong>: «(verify)» بەلگىسى سىزگە قايسى قۇرلارنى ئىككىنچى قېتىم تەكشۈرۈش كېرەكلىكىنى دەرھال كۆرسىتىدۇ.</p>
+
+<h2>3) سۈپەتنى تېز تەكشۈرۈش: 3 تۈرلۈك «فىلتىر»</h2>
+<ol>
+  <li><strong>ئىملا/خەت</strong>: ئۇيغۇرچە يېزىق توغرىمۇ؟ (ئارتۇق تىنىش بەلگىلىرى، خەت ئالماشتۇرۇش…)</li>
+  <li><strong>مەنىسى</strong>: English مەنىسى ھەقىقەتەن ماسمۇ؟ (كۆپ مەنىلىك سۆزلەردە دىققەت)</li>
+  <li><strong>جۈملە</strong>: ئۈلگە جۈملە تەبىئىمۇ؟ (ئىشلىتىش مۇھىتى توغرىمۇ؟)</li>
+</ol>
+<p>AI دىن چىققان نەتىجىنى «سۈپەت قاپقىسى»دىن ئۆتكۈزۈڭ. مەقسەت: <em>تېز</em> + <em>توغرا</em>.</p>
+
+<h2>4) Anki غا كىرگۈزۈش (Import) ئەمەلىي قەدەملىرى</h2>
+<ul>
+  <li>TSV نى <strong>plain text</strong> قىلىپ ساقلاڭ (مەسىلەن: <code>uyghur-travel.tsv</code>).</li>
+  <li>Anki → <strong>File → Import</strong></li>
+  <li>Separator: <strong>Tab</strong></li>
+  <li>Field mapping: Front / Back / Example نى ماسلاشتۇرۇڭ</li>
+  <li>Deck تاللاپ Import قىلىڭ</li>
+</ul>
+
+<h3>تەۋسىيە: «Back» نى بەك ئۇزۇن قىلماڭ</h3>
+<p>Back بېتى بەك ئۇزۇن بولسا، قايتىلاندۇرۇش جەريانىدا زېرىكىش كۈچەيدۇ. «1–2 جۈملە» يېتەرلىك.</p>
+
+<h2>5) «جۈملە-كارتى» نى كۈچەيتىدىغان 2 دانە قوشۇمچە پرومپت</h2>
+<p><strong>(A) Minimal pairs (تەلەپچان تەمىنات)</strong> — ئاۋاز ئوخشىشىدىغان سۆزلەرنى ئايرىش:</p>
+<pre><code>تۆۋەندىكى 10 سۆز ئۈچۈن minimal pairs ياكى ئوخشىشىدىغان سۆزلەرنى تېپىپ
+Anki ئۈچۈن TSV شەكلىدە 2 ستون قىلىپ چىقىرىڭ:
+Front\tBack
+سۆزلەر: ...</code></pre>
+
+<p><strong>(B) «كۆپ ئۇچرايدىغان خاتالىق» كارتىلىرى</strong> — ئۆگىنىشنى تېزلىتىدۇ:</p>
+<pre><code>مەن ئۇيغۇرچە ئۆگىنىۋاتىمەن.
+تېما: سودا/ئىشخانا.
+كۆپ ئۇچرايدىغان 15 خاتالىقنى (wrong → correct) شەكلىدە Anki TSV قىلىپ چىقىرىڭ:
+Front\tBack\tExample</code></pre>
+
+<h2>6) شەخسىيەت/مەخپىيەتلىك: قانداق مەزمۇننى يوللىماسلىق كېرەك؟</h2>
+<ul>
+  <li>شەخسىي ID، تېلېفون، ھەق-ھېسابات ئۇچۇرى، ئىچكى ئىش ھۆججىتى…</li>
+  <li>ئادەم نامى/ئادرېس قاتارلىق سەزگۈر ئۇچۇرلار</li>
+</ul>
+<p>ئەگەر تەڭشەك (settings) تەلەپ قىلالىسىڭىز، «داتا ساقلاش»/«تارىخ ساقلاش» تاللانمىلىرىنى تەكشۈرۈپ قويۇڭ.</p>
+
+<h2>7) كىچىك باشلاش پىلانى (7 كۈنلۈك)</h2>
+<ol>
+  <li>1-كۈن: 20 كارتى (سەپەر تېمىسى)</li>
+  <li>2-كۈن: 20 كارتى (ئائىلە/كۈندىلىك)</li>
+  <li>3-كۈن: 20 كارتى (تېخنىكا/ئىنتېرنېت)</li>
+  <li>4-كۈن: 10 جۈملە-كارتى + 10 سۆزلۈك</li>
+  <li>5-كۈن: «خاتالىق» كارتىلىرى (wrong→correct)</li>
+  <li>6-كۈن: قايتا تەكشۈرۈش ۋە ئارتۇق كارتىنى ئۆچۈرۈش</li>
+  <li>7-كۈن: 1 ئايلىق رېتىم: كۈنىگە 10–15 مىنۇت</li>
+</ol>
+
+<h2>خۇلاسى</h2>
+<p>AI نى «كارتى يازغۇچى» قىلىپلا قالماستىن، <strong>تۈزۈم قويغۇچى</strong> قىلىپ ئىشلىتىڭ: فورمات، سۈپەت قاپقىسى، تەكشۈرۈش بەلگىسى. شۇنداق قىلغاندا Anki بىلەن يادلاش <em>تېز</em>، <em>ئاسان</em> ۋە <em>مۇقىم</em> بولىدۇ.</p>
+
+<p>ئەگەر خالىسىڭىز، كىيىنكى يازمىدا: <strong>TSV نى ئاپتومات تەكشۈرۈپ (duplicate/typo) چىقىدىغان كىچىك Python سكрипت</strong> نىمۇ بەھىرلەيمەن.</p></div>
+        <div class="tags"><span class="tag">#تېخنىكا</span><span class="tag">#AI</span><span class="tag">#Anki</span><span class="tag">#ئۆگىنىش</span><span class="tag">#ئۇيغۇرچە</span></div>
+        <div class="share">
+          <a class="btn" href="https://t.me/share/url?url=https%3A%2F%2Fidirsuyghur.github.io%2Fuyghur-daily-AI%2Fp%2Fai-anki-uyghur-flashcards%2F&text=AI%20%D8%A8%D9%89%D9%84%DB%95%D9%86%20Anki%20%D8%AF%D8%A7%20%D8%A6%DB%87%D9%8A%D8%BA%DB%87%D8%B1%DA%86%DB%95%20%D8%B3%DB%86%D8%B2%D9%84%DB%88%D9%83%20%D9%83%D8%A7%D8%B1%D8%AA%D9%89%D9%84%D9%89%D8%B1%D9%89%D9%86%D9%89%20%D8%AA%DB%90%D8%B2%20%D9%82%DB%87%D8%B1%DB%87%D8%B4%20(%D8%A6%DB%95%D9%85%DB%95%D9%84%D9%89%D9%8A%20%D9%82%D9%88%D9%84%D9%84%D8%A7%D9%86%D9%85%D8%A7)" target="_blank" rel="noopener noreferrer">Telegram</a>
+          <a class="btn" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fidirsuyghur.github.io%2Fuyghur-daily-AI%2Fp%2Fai-anki-uyghur-flashcards%2F&text=AI%20%D8%A8%D9%89%D9%84%DB%95%D9%86%20Anki%20%D8%AF%D8%A7%20%D8%A6%DB%87%D9%8A%D8%BA%DB%87%D8%B1%DA%86%DB%95%20%D8%B3%DB%86%D8%B2%D9%84%DB%88%D9%83%20%D9%83%D8%A7%D8%B1%D8%AA%D9%89%D9%84%D9%89%D8%B1%D9%89%D9%86%D9%89%20%D8%AA%DB%90%D8%B2%20%D9%82%DB%87%D8%B1%DB%87%D8%B4%20(%D8%A6%DB%95%D9%85%DB%95%D9%84%D9%89%D9%8A%20%D9%82%D9%88%D9%84%D9%84%D8%A7%D9%86%D9%85%D8%A7)" target="_blank" rel="noopener noreferrer">X</a>
+          <a class="btn" href="https://idirsuyghur.github.io/uyghur-daily-AI/post.html?slug=ai-anki-uyghur-flashcards">Dynamic view</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</body>
+</html>
