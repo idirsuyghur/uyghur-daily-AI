@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="AI content repurpose cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="0.55" stop-color="#111b3a"/>
+      <stop offset="1" stop-color="#0b2a3a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6ee7ff"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <style>
+      .kicker { font: 600 22px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; letter-spacing: 0.12em; }
+      .title  { font: 700 46px/1.25 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .sub    { font: 500 22px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; opacity: 0.92; }
+      .chip   { font: 600 18px/1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+      .mono   { font: 600 16px/1.3 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Accent rings -->
+  <g opacity="0.9">
+    <circle cx="1040" cy="120" r="92" fill="none" stroke="url(#accent)" stroke-width="6" opacity="0.9"/>
+    <circle cx="1040" cy="120" r="126" fill="none" stroke="#6ee7ff" stroke-width="2" opacity="0.35"/>
+    <circle cx="1040" cy="120" r="160" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0.25"/>
+  </g>
+
+  <!-- Main card -->
+  <g filter="url(#softShadow)">
+    <rect x="70" y="85" width="820" height="460" rx="28" fill="#0b1226" opacity="0.92" stroke="#23315c" stroke-width="1.5"/>
+    <rect x="70" y="85" width="820" height="86" rx="28" fill="#0f1a3a" opacity="0.95"/>
+    <rect x="70" y="145" width="820" height="26" fill="#0f1a3a" opacity="0.95"/>
+    <text x="110" y="138" class="kicker" fill="#bfe8ff">UYGHUR DAILY AI</text>
+    <text x="810" y="138" text-anchor="end" class="mono" fill="#9ca3af">2026-06-01</text>
+  </g>
+
+  <!-- Title -->
+  <text x="110" y="250" class="title" fill="#ffffff">AI بىلەن «1 ماقالە»نى 5 فورماتقا</text>
+  <text x="110" y="308" class="title" fill="#ffffff">ئايلاندۇرۇش</text>
+
+  <text x="110" y="370" class="sub" fill="#dbeafe">بلاگ → سوشل → ئېلخەت → سلايد → قىسقا ۋىدېئو</text>
+
+  <!-- Format chips -->
+  <g transform="translate(110 408)">
+    <g>
+      <rect x="0" y="0" width="96" height="40" rx="14" fill="#0b2642" stroke="#2dd4bf" stroke-width="1.2"/>
+      <text x="48" y="26" class="chip" fill="#99f6e4" text-anchor="middle">BLOG</text>
+    </g>
+    <g transform="translate(110 0)">
+      <rect x="0" y="0" width="110" height="40" rx="14" fill="#24113a" stroke="#a78bfa" stroke-width="1.2"/>
+      <text x="55" y="26" class="chip" fill="#ddd6fe" text-anchor="middle">SOCIAL</text>
+    </g>
+    <g transform="translate(238 0)">
+      <rect x="0" y="0" width="110" height="40" rx="14" fill="#0b2642" stroke="#60a5fa" stroke-width="1.2"/>
+      <text x="55" y="26" class="chip" fill="#bfdbfe" text-anchor="middle">EMAIL</text>
+    </g>
+    <g transform="translate(366 0)">
+      <rect x="0" y="0" width="104" height="40" rx="14" fill="#24113a" stroke="#f472b6" stroke-width="1.2"/>
+      <text x="52" y="26" class="chip" fill="#fbcfe8" text-anchor="middle">SLIDES</text>
+    </g>
+    <g transform="translate(488 0)">
+      <rect x="0" y="0" width="120" height="40" rx="14" fill="#0b2642" stroke="#fbbf24" stroke-width="1.2"/>
+      <text x="60" y="26" class="chip" fill="#fde68a" text-anchor="middle">SHORT</text>
+    </g>
+  </g>
+
+  <!-- Decorative graph -->
+  <g transform="translate(930 290)" opacity="0.95">
+    <rect x="0" y="0" width="220" height="220" rx="24" fill="#0b1226" opacity="0.78" stroke="#23315c" stroke-width="1.5"/>
+    <path d="M30 170 C70 135 88 140 115 110 C145 80 162 90 190 55" fill="none" stroke="url(#accent)" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="30" cy="170" r="6" fill="#6ee7ff"/>
+    <circle cx="115" cy="110" r="6" fill="#a78bfa"/>
+    <circle cx="190" cy="55" r="6" fill="#6ee7ff"/>
+    <text x="110" y="198" class="mono" fill="#c7d2fe" text-anchor="middle">repurpose</text>
+  </g>
+</svg>
