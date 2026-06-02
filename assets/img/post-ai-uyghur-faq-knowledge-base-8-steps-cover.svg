@@ -1,0 +1,36 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#08111F"/>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1320" cy="140" r="220" fill="#22D3EE" fill-opacity="0.18"/>
+  <circle cx="250" cy="760" r="260" fill="#0EA5E9" fill-opacity="0.12"/>
+  <rect x="120" y="120" width="1360" height="660" rx="36" fill="#0F172A" fill-opacity="0.92" stroke="#334155" stroke-width="2"/>
+
+  <rect x="930" y="220" width="360" height="360" rx="28" fill="#111827" stroke="#475569" stroke-width="2"/>
+  <rect x="980" y="280" width="260" height="58" rx="18" fill="#1E293B"/>
+  <rect x="980" y="368" width="220" height="18" rx="9" fill="#38BDF8" fill-opacity="0.85"/>
+  <rect x="980" y="402" width="180" height="18" rx="9" fill="#38BDF8" fill-opacity="0.45"/>
+  <rect x="980" y="454" width="230" height="18" rx="9" fill="#38BDF8" fill-opacity="0.85"/>
+  <rect x="980" y="488" width="160" height="18" rx="9" fill="#38BDF8" fill-opacity="0.45"/>
+  <circle cx="1195" cy="309" r="10" fill="#22C55E"/>
+
+  <path d="M330 290C330 246.922 364.922 212 408 212H812C855.078 212 890 246.922 890 290V420C890 463.078 855.078 498 812 498H564L472 576V498H408C364.922 498 330 463.078 330 420V290Z" fill="#E0F2FE"/>
+  <path d="M420 310H790" stroke="#0F172A" stroke-width="22" stroke-linecap="round"/>
+  <path d="M420 372H736" stroke="#0F172A" stroke-width="22" stroke-linecap="round" opacity="0.82"/>
+  <path d="M420 434H678" stroke="#0F172A" stroke-width="22" stroke-linecap="round" opacity="0.6"/>
+
+  <path d="M238 474C238 438.654 266.654 410 302 410H572C607.346 410 636 438.654 636 474V560C636 595.346 607.346 624 572 624H418L350 684V624H302C266.654 624 238 595.346 238 560V474Z" fill="#0EA5E9"/>
+  <path d="M306 486H554" stroke="white" stroke-width="18" stroke-linecap="round"/>
+  <path d="M306 536H518" stroke="white" stroke-width="18" stroke-linecap="round" opacity="0.86"/>
+
+  <text x="1300" y="165" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="34" text-anchor="end">Uyghur Daily AI</text>
+  <text x="820" y="690" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="72" font-weight="700" text-anchor="middle">AI FAQ / Knowledge Base</text>
+  <text x="820" y="750" fill="#BAE6FD" font-family="Arial, sans-serif" font-size="34" text-anchor="middle">Telegram • WhatsApp • Website</text>
+
+  <defs>
+    <linearGradient id="bg" x1="130" y1="90" x2="1430" y2="810" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="0.52" stop-color="#111827"/>
+      <stop offset="1" stop-color="#082F49"/>
+    </linearGradient>
+  </defs>
+</svg>
