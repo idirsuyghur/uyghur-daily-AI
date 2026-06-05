@@ -1,0 +1,65 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="80" x2="1480" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="0.55" stop-color="#102A43"/>
+      <stop offset="1" stop-color="#0B3B2E"/>
+    </linearGradient>
+    <linearGradient id="card" x1="180" y1="160" x2="1030" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0F2FE" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#DBEAFE" stop-opacity="0.92"/>
+    </linearGradient>
+    <filter id="shadow" x="110" y="110" width="1380" height="720" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="28"/>
+      <feGaussianBlur stdDeviation="28"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.01 0 0 0 0 0.08 0 0 0 0 0.16 0 0 0 0.28 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1310" cy="180" r="180" fill="#38BDF8" fill-opacity="0.12"/>
+  <circle cx="1440" cy="740" r="240" fill="#22C55E" fill-opacity="0.14"/>
+  <circle cx="220" cy="120" r="120" fill="#F59E0B" fill-opacity="0.10"/>
+
+  <g filter="url(#shadow)">
+    <rect x="140" y="140" width="1320" height="620" rx="34" fill="#0B1220" fill-opacity="0.66"/>
+    <rect x="170" y="170" width="900" height="560" rx="28" fill="url(#card)"/>
+    <rect x="1110" y="170" width="320" height="560" rx="28" fill="#08111F" stroke="#1E3A5F"/>
+  </g>
+
+  <rect x="220" y="220" width="800" height="84" rx="20" fill="#0F172A"/>
+  <text x="260" y="276" fill="#F8FAFC" font-size="54" font-family="Lateef, serif">AI بىلەن ئۇيغۇرچە Newsletter</text>
+
+  <text x="220" y="364" fill="#0F172A" font-size="82" font-weight="700" font-family="Lateef, serif">بىرىنچى 100 مۇشتەرى</text>
+  <text x="220" y="446" fill="#1E293B" font-size="60" font-family="Lateef, serif">7 قەدەملىك ئەمەلىي باشلاش يولى</text>
+
+  <rect x="220" y="512" width="360" height="82" rx="22" fill="#DB2777"/>
+  <text x="400" y="566" text-anchor="middle" fill="#FFF7ED" font-size="42" font-family="Lateef, serif">Email • Audience • Growth</text>
+
+  <rect x="220" y="626" width="520" height="2" fill="#94A3B8" fill-opacity="0.45"/>
+  <text x="220" y="682" fill="#334155" font-size="34" font-family="Lateef, serif">AI idea bank • subject line • signup copy • CTA</text>
+
+  <g transform="translate(1160 244)">
+    <rect width="220" height="156" rx="22" fill="#F8FAFC"/>
+    <rect x="20" y="24" width="180" height="20" rx="10" fill="#CBD5E1"/>
+    <rect x="20" y="58" width="142" height="14" rx="7" fill="#E2E8F0"/>
+    <rect x="20" y="84" width="170" height="14" rx="7" fill="#E2E8F0"/>
+    <rect x="20" y="114" width="110" height="18" rx="9" fill="#38BDF8"/>
+  </g>
+
+  <g transform="translate(1158 458)">
+    <rect width="224" height="84" rx="22" fill="#111827" stroke="#334155"/>
+    <path d="M36 42H188" stroke="#22C55E" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="74" cy="42" r="12" fill="#22C55E"/>
+    <circle cx="150" cy="42" r="12" fill="#38BDF8"/>
+  </g>
+
+  <g transform="translate(1140 618)">
+    <rect width="260" height="56" rx="18" fill="#22C55E"/>
+    <text x="130" y="37" text-anchor="middle" fill="#052E16" font-size="28" font-family="ui-monospace, monospace">subscribe()</text>
+  </g>
+</svg>
