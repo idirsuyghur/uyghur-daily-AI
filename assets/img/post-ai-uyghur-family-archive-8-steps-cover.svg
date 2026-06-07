@@ -1,0 +1,68 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="60" x2="1450" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07131E"/>
+      <stop offset="0.48" stop-color="#12304A"/>
+      <stop offset="1" stop-color="#5B3B20"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="170" y1="150" x2="1050" y2="730" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7ED" stop-opacity="0.98"/>
+      <stop offset="1" stop-color="#E0F2FE" stop-opacity="0.94"/>
+    </linearGradient>
+    <filter id="shadow" x="90" y="100" width="1430" height="730" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="28"/>
+      <feGaussianBlur stdDeviation="28"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.01 0 0 0 0 0.06 0 0 0 0 0.12 0 0 0 0.34 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_1"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1_1" result="shape"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1280" cy="170" r="180" fill="#38BDF8" fill-opacity="0.12"/>
+  <circle cx="1420" cy="700" r="230" fill="#F59E0B" fill-opacity="0.14"/>
+  <circle cx="220" cy="180" r="140" fill="#22C55E" fill-opacity="0.10"/>
+
+  <g filter="url(#shadow)">
+    <rect x="140" y="140" width="1320" height="620" rx="34" fill="#09111F" fill-opacity="0.74"/>
+    <rect x="170" y="170" width="910" height="560" rx="28" fill="url(#panel)"/>
+    <rect x="1110" y="170" width="320" height="560" rx="28" fill="#0F172A" stroke="#284764"/>
+  </g>
+
+  <rect x="220" y="220" width="780" height="84" rx="20" fill="#0F172A"/>
+  <text x="260" y="275" fill="#F8FAFC" font-size="50" font-family="Lateef, serif">AI بىلەن ئۇيغۇرچە ئائىلە Archive</text>
+
+  <text x="220" y="366" fill="#0F172A" font-size="80" font-weight="700" font-family="Lateef, serif">ئاۋاز، رەسىم ۋە ھۆججەتنى</text>
+  <text x="220" y="446" fill="#0F172A" font-size="80" font-weight="700" font-family="Lateef, serif">كەلگۈسىگە ساقلاش</text>
+  <text x="220" y="520" fill="#334155" font-size="56" font-family="Lateef, serif">8 قەدەملىك رەقەملەشتۈرۈش جەريانى</text>
+
+  <rect x="220" y="572" width="480" height="82" rx="22" fill="#F97316"/>
+  <text x="460" y="626" text-anchor="middle" fill="#FFF7ED" font-size="40" font-family="Lateef, serif">Scan • Transcript • Metadata • Backup</text>
+
+  <rect x="220" y="684" width="540" height="2" fill="#94A3B8" fill-opacity="0.45"/>
+  <text x="220" y="738" fill="#334155" font-size="34" font-family="Lateef, serif">family memory • OCR • caption • searchable archive</text>
+
+  <g transform="translate(1152 214)">
+    <rect width="236" height="132" rx="24" fill="#F8FAFC"/>
+    <rect x="22" y="24" width="92" height="72" rx="16" fill="#FDBA74"/>
+    <circle cx="68" cy="60" r="14" fill="#FFF7ED"/>
+    <rect x="130" y="28" width="84" height="14" rx="7" fill="#0EA5E9"/>
+    <rect x="130" y="56" width="74" height="12" rx="6" fill="#CBD5E1"/>
+    <rect x="130" y="80" width="62" height="12" rx="6" fill="#E2E8F0"/>
+  </g>
+
+  <g transform="translate(1152 388)">
+    <rect width="236" height="146" rx="24" fill="#111827" stroke="#334155"/>
+    <rect x="22" y="26" width="150" height="18" rx="9" fill="#22C55E"/>
+    <rect x="22" y="58" width="188" height="12" rx="6" fill="#475569"/>
+    <rect x="22" y="84" width="168" height="12" rx="6" fill="#475569"/>
+    <rect x="22" y="110" width="128" height="12" rx="6" fill="#475569"/>
+  </g>
+
+  <g transform="translate(1138 592)">
+    <rect width="264" height="64" rx="18" fill="#22C55E"/>
+    <text x="132" y="41" text-anchor="middle" fill="#052E16" font-size="28" font-family="ui-monospace, monospace">archive_memory()</text>
+  </g>
+</svg>
