@@ -99,7 +99,10 @@ const post = {
 if (featuredImagePrompt) post.featuredImagePrompt = featuredImagePrompt;
 
 fs.writeFileSync(path.join(postsDir, file), JSON.stringify(post, null, 2) + '\n');
-index.posts.unshift({ ...post });
+// Keep the public index lightweight. Article bodies live in data/posts/*.json
+// and are loaded only when a reader opens an article.
+const { contentHtml: _contentHtml, featuredImagePrompt: _featuredImagePrompt, ...postMeta } = post;
+index.posts.unshift(postMeta);
 fs.writeFileSync(indexPath, JSON.stringify(index, null, 2) + '\n');
 
 const staticGenerator = path.join(repoRoot, 'scripts', 'generate-static-post-pages.js');
