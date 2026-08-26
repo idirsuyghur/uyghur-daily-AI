@@ -5,6 +5,23 @@
   },
   "posts": [
     {
+      "title": "شەرقىي تۈركىستاندىكى ئۇيغۇر كىشىلىك ھوقۇق مەسىلىسى",
+      "slug": "sherqiy-turkistandiki-uyghur-kishilik-hoquq-mesilisi",
+      "date": "2026-08-26",
+      "category": "شەرقىي تۈركىستان",
+      "tags": [
+        "ئۇيغۇرلار",
+        "شەرقىي تۈركىستان",
+        "كىشىلىك ھوقۇق",
+        "خەلقئارا قانۇن",
+        "دىن ئەركىنلىكى",
+        "مەدەنىيەت ھوقۇقى"
+      ],
+      "description": "شەرقىي تۈركىستاندىكى ئۇيغۇرلار دۇچ كېلىۋاتقان خالىغانچە تۇتقۇن، دىن ۋە تىل ئەركىنلىكى، نازارەت، ئائىلە ۋە ئەمگەك ھوقۇقى مەسىلىلىرىنى خەلقئارا قانۇن نۇقتىسىدىن مۇھاكىمە قىلىدىغان ئىلمىي ماقالە.",
+      "featuredImage": "assets/img/uyghur-human-rights-academic-article-2026.png",
+      "file": "post-sherqiy-turkistandiki-uyghur-kishilik-hoquq-mesilisi.json"
+    },
+    {
       "title": "نېمە ئۈچۈن نۇرغۇن مۇسۇلمان دۆلەتلىرى ئۇيغۇرلارنى ئاشكارا قوللىمايدۇ؟",
       "slug": "musulman-dowetliri-uyghurlarni-neme-uchun-qollimaydu-2026",
       "date": "2026-08-20",
