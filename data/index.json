@@ -5,6 +5,24 @@
   },
   "posts": [
     {
+      "title": "ئۆيدىكى بىر جۈملە: ئۇيغۇر تىلى ۋە مەدەنىيىتىنى كۈندىلىك تۇرمۇشتا ياشىتىش",
+      "slug": "aile-turmushida-uyghur-tili-we-medeniyiti",
+      "date": "2026-10-27",
+      "category": "ئۇيغۇر مەدەنىيىتى",
+      "tags": [
+        "ئانا تىل",
+        "ئائىلە",
+        "ئۇيغۇر مەدەنىيىتى",
+        "بالىلار",
+        "كىتاب ئوقۇش"
+      ],
+      "description": "داستىخان ئەتراپىدىكى پاراڭ، بىللە ئوقۇلغان بىر بەت ۋە كىچىك ئائىلە ئادەتلىرى ئارقىلىق ئۇيغۇر تىلى ۋە مەدەنىيىتىگە كۈندىلىك تۇرمۇشتا ئورۇن بېرىش.",
+      "featuredImage": "assets/img/aile-turmushida-uyghur-tili-we-medeniyiti.png",
+      "featuredImageAlt": "داستىخان ئەتراپىدا ھېكايە ئاڭلاپ، كىتاب كۆرۈۋاتقان ئائىلىنىڭ سۈنئىي ئەقىل ئارقىلىق يارىتىلغان تەسۋىرى",
+      "featuredImageCaption": "بىللە ئوقۇش ۋە پاراڭلىشىش — سۈنئىي ئەقىل ياراتقان تەسۋىر؛ ھەقىقىي فوتوسۈرەت ئەمەس.",
+      "file": "post-aile-turmushida-uyghur-tili-we-medeniyiti.json"
+    },
+    {
       "title": "شەرقىي تۈركىستاندىكى ئۇيغۇر كىشىلىك ھوقۇق مەسىلىسى",
       "slug": "sherqiy-turkistandiki-uyghur-kishilik-hoquq-mesilisi",
       "date": "2026-08-26",

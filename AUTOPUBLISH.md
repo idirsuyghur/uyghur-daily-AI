@@ -1,4 +1,6 @@
-# Autopublish (one command)
+# Autopublish (legacy — do not use as publication proof)
+
+Use [PUBLISHING.md](PUBLISHING.md) for the reviewed, explicit article workflow. The helper below can create placeholder content and reports success even when its push fails; its historical instructions are retained for reference.
 
 ## Command
 
